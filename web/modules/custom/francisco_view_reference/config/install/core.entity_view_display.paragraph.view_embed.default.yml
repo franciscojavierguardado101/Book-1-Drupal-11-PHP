@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view_embed.field_view_reference
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - francisco_view_reference
+    - paragraphs
+id: paragraph.view_embed.default
+targetEntityType: paragraph
+bundle: view_embed
+mode: default
+content:
+  field_view_reference:
+    type: francisco_view_reference_default
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

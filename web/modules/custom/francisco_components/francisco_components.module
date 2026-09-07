@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Francisco Components module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for field_ui_field_storage_add_form.
+ */
+function francisco_components_form_field_ui_field_storage_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Provide defaults when reusing field_components
+  if (isset($form['existing_storage_name']) && $form['existing_storage_name']['#default_value'] === 'field_components') {
+    $form['#submit'][] = 'francisco_components_field_reuse_submit';
+  }
+}
+
+/**
+ * Custom submit handler for reusing field_components.
+ */
+function francisco_components_field_reuse_submit(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  
+  // Set default configuration for the field
+  $field_config = [
+    'label' => 'Components',
+    'description' => 'Add modular content components',
+    'required' => FALSE,
+    'settings' => [
+      'handler' => 'default:paragraph',
+      'handler_settings' => [
+        'negate' => 0,
+        'target_bundles' => ['rich_text' => 'rich_text'],
+        'target_bundles_drag_drop' => [
+          'rich_text' => [
+            'enabled' => TRUE,
+            'weight' => 1,
+          ],
+        ],
+      ],
+    ],
+  ];
+  
+  $form_state->set('field_config_defaults', $field_config);
+}

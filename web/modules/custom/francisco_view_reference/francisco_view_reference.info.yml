@@ -1,0 +1,8 @@
+name: 'Francisco View Reference'
+type: module
+description: 'Provides a View Reference field type for embedding Drupal Views in Paragraphs.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:paragraphs
+  - drupal:views

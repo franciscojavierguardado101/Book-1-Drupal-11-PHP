@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11a2fff5fd9d63e27486e9b0fbff1bdc",
+    "content-hash": "a599f6bcd989de97376b3c84c4c1bb4f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1332,6 +1332,397 @@
                 "source": "https://github.com/drupal/core-recommended/tree/11.4.6"
             },
             "time": "2026-09-03T08:08:54+00:00"
+        },
+        {
+            "name": "drupal/entity_reference_revisions",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "cb900e41124979a46da1912ff2b502270beda632"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
+            },
+            "require-dev": {
+                "drupal/diff": "^1 || ^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1767266825",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Entity Reference Revisions",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/jsonapi_menu_items",
+            "version": "1.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_menu_items.git",
+                "reference": "1.2.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_menu_items-1.2.8.zip",
+                "reference": "1.2.8",
+                "shasum": "6be93fc2636584ce70c11bb8aef3e5cf82365c1d"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11",
+                "drupal/jsonapi_resources": "^1.0"
+            },
+            "require-dev": {
+                "drupal/jsonapi_hypermedia": "^1.6",
+                "drupal/menu_item_extras": "^3.0",
+                "drupal/menu_link_config": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.8",
+                    "datestamp": "1748881155",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "Adds a JSON API resource for menu items.",
+            "homepage": "https://www.drupal.org/project/jsonapi_menu_items",
+            "keywords": [
+                "Drupal",
+                "JSON API"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_menu_items"
+            }
+        },
+        {
+            "name": "drupal/jsonapi_resources",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_resources.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_resources-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "66ab9e109e274a0e48bddbce86854554b7eb5098"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/jsonapi_extras": "^3.28"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1787322568",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "API-First Initiative",
+                    "homepage": "https://www.drupal.org/user/3616626"
+                },
+                {
+                    "name": "bradjones1",
+                    "homepage": "https://www.drupal.org/user/405824"
+                },
+                {
+                    "name": "gabesullice",
+                    "homepage": "https://www.drupal.org/user/2287430"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "This module let's you define custom resources at routes of your choice that use existing resource types.",
+            "homepage": "https://www.drupal.org/project/jsonapi_resources",
+            "keywords": [
+                "Drupal",
+                "JSON API"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_resources"
+            }
+        },
+        {
+            "name": "drupal/paragraphs",
+            "version": "1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs.git",
+                "reference": "8.x-1.23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.23.zip",
+                "reference": "8.x-1.23",
+                "shasum": "999a66b51360006f9ead6e01b0ad8c087ca828f9"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/entity_reference_revisions": "~1.3"
+            },
+            "require-dev": {
+                "drupal/block_field": "^1",
+                "drupal/diff": "^1 || ^2",
+                "drupal/entity_browser": "^2",
+                "drupal/entity_usage": "^2 || ^5",
+                "drupal/feeds": "^3",
+                "drupal/field_group": "^4",
+                "drupal/inline_entity_form": "^3",
+                "drupal/paragraphs-paragraphs_library": "*",
+                "drupal/replicate": "^1",
+                "drupal/search_api": "^1",
+                "drupal/search_api_db": "*"
+            },
+            "suggest": {
+                "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.23",
+                    "datestamp": "1786629882",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                }
+            ],
+            "description": "Enables the creation of Paragraphs entities.",
+            "homepage": "https://www.drupal.org/project/paragraphs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_ee",
+            "version": "10.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_ee.git",
+                "reference": "10.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_ee-10.1.0.zip",
+                "reference": "10.1.0",
+                "shasum": "ab52a7d1fd667d4161a1637f41fcb6a6fce179ef"
+            },
+            "require": {
+                "drupal/core": "^11.3",
+                "drupal/paragraphs_features": "^2.0"
+            },
+            "require-dev": {
+                "drupal/paragraphs_sets": "*",
+                "phpunit/phpunit": "^11",
+                "weitzman/drupal-test-traits": "^1.5 || ^2.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "10.1.0",
+                    "datestamp": "1780469376",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Borchert",
+                    "homepage": "https://www.drupal.org/user/36942",
+                    "email": "stefan.borchert@undpaul.de"
+                }
+            ],
+            "description": "Paragraphs Editor Enhancements for better usability.",
+            "homepage": "https://www.drupal.org/project/paragraphs_ee",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_ee"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_features",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_features.git",
+                "reference": "2.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_features-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "8a4872256ca008a9a0c86fdbe6e7dfa594d47779"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10 || ^11",
+                "drupal/paragraphs": "^1.13"
+            },
+            "require-dev": {
+                "drupal/gin": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.0",
+                    "datestamp": "1750763757",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mladen Todorovic",
+                    "homepage": "https://www.drupal.org/user/2103716",
+                    "email": "mladen.todorovic@burda.com"
+                },
+                {
+                    "name": "Daniel Bosen",
+                    "homepage": "https://www.drupal.org/user/404865",
+                    "email": "daniel.bosen@burda.com"
+                },
+                {
+                    "name": "Christian Fritsch",
+                    "homepage": "https://www.drupal.org/user/3511180",
+                    "email": "christian.fritsch@burda.com"
+                },
+                {
+                    "name": "Volker Killesreiter",
+                    "homepage": "https://www.drupal.org/user/57527",
+                    "email": "volker.killesreiter@burda.com"
+                },
+                {
+                    "name": "Alex Pott",
+                    "email": "alex.a.pott@gmail.com"
+                }
+            ],
+            "description": "Paragraphs features for extending paragraphs widget functionality.",
+            "homepage": "https://www.drupal.org/project/paragraphs_features",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_features"
+            }
         },
         {
             "name": "drush/drush",

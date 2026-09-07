@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - francisco_view_reference
+id: paragraph.view_embed.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: view_embed
+label: 'View'
+description: 'Select the Drupal View and display to embed in this content.'
+required: true
+translatable: false
+default_value: []
+default_value_callback: ''
+settings: {}
+field_type: francisco_view_reference

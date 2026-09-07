@@ -1,0 +1,11 @@
+name: Francisco Components
+description: 'Provides reusable Components field with paragraphs and off-canvas UI.'
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs
+  - paragraphs:paragraphs_ee
+  - paragraphs:paragraphs_features
+package: Custom

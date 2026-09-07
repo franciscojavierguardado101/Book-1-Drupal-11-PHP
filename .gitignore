@@ -98,3 +98,4 @@
 
 # Ignore local DDEV configuration
 /.ddev/
+backups/

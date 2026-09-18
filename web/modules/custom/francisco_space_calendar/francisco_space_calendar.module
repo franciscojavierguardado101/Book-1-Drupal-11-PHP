@@ -1,0 +1,56 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Francisco Space Calendar module.
+ *
+ * Provides a CMS-configurable Space Calendar paragraph type.
+ * API endpoint and key are stored in config and never hardcoded.
+ */
+
+use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_install().
+ *
+ * Attaches field_space_calendar to the calendar_event form/view displays
+ * without shipping full display configs that would overwrite existing ones.
+ */
+function francisco_space_calendar_install(): void {
+  $storage = \Drupal::entityTypeManager()->getStorage('entity_form_display');
+
+  /** @var EntityFormDisplayInterface|null $form_display */
+  $form_display = $storage->load('node.calendar_event.default');
+  if ($form_display) {
+    $form_display->setComponent('field_space_calendar', [
+      'type'     => 'paragraphs',
+      'weight'   => 20,
+      'settings' => [
+        'title'                  => 'Space Calendar',
+        'title_plural'           => 'Space Calendars',
+        'edit_mode'              => 'open',
+        'closed_mode'            => 'summary',
+        'autocollapse'           => 'none',
+        'add_mode'               => 'button',
+        'form_display_mode'      => 'default',
+        'default_paragraph_type' => 'space_calendar',
+      ],
+    ])->save();
+  }
+
+  $view_storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
+
+  /** @var EntityViewDisplayInterface|null $view_display */
+  $view_display = $view_storage->load('node.calendar_event.default');
+  if ($view_display) {
+    $view_display->setComponent('field_space_calendar', [
+      'type'   => 'entity_reference_revisions_entity_view',
+      'weight' => 20,
+      'label'  => 'hidden',
+      'settings' => ['view_mode' => 'default'],
+    ])->save();
+  }
+}

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.space_calendar.field_sc_label
+    - paragraphs.paragraphs_type.space_calendar
+id: paragraph.space_calendar.default
+targetEntityType: paragraph
+bundle: space_calendar
+mode: default
+content:
+  field_sc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. Space Weather Events'
+    third_party_settings: {}
+hidden: {}

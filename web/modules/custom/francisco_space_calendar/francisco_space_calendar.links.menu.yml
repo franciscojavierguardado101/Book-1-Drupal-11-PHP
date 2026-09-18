@@ -1,0 +1,6 @@
+francisco_space_calendar.settings:
+  title: 'Space Calendar'
+  description: 'Configure the space events API endpoint and key.'
+  parent: system.admin_config_services
+  route_name: francisco_space_calendar.settings
+  weight: 10

@@ -1,0 +1,7 @@
+name: 'Francisco Descriptive Content'
+type: module
+description: 'Provides the Descriptive Content paragraph type — a title and rich-text description block usable on any content type.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - paragraphs:paragraphs

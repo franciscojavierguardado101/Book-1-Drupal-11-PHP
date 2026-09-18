@@ -1,0 +1,10 @@
+uuid: 18f72ab0-3bfd-4844-88fd-078ff949827f
+langcode: en
+status: true
+dependencies: {  }
+id: descriptive_content
+label: 'Descriptive Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {}
+id: space_calendar
+label: 'Space Calendar'
+icon_uuid: null
+icon_default: null
+description: 'Embeds the space weather event calendar widget on any page.'
+behavior_plugins: {}

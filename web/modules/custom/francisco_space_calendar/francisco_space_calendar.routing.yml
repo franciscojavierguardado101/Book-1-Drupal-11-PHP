@@ -1,0 +1,27 @@
+francisco_space_calendar.settings:
+  path: '/admin/config/services/space-calendar'
+  defaults:
+    _form: '\Drupal\francisco_space_calendar\Form\SpaceCalendarSettingsForm'
+    _title: 'Space Calendar API Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+francisco_space_calendar.config_api:
+  path: '/api/space-calendar/config'
+  defaults:
+    _controller: '\Drupal\francisco_space_calendar\Controller\SpaceCalendarConfigController::getConfig'
+    _format: 'json'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE
+
+francisco_space_calendar.resolve_path:
+  path: '/api/resolve-path'
+  defaults:
+    _controller: '\Drupal\francisco_space_calendar\Controller\SpaceCalendarConfigController::resolvePath'
+    _format: 'json'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

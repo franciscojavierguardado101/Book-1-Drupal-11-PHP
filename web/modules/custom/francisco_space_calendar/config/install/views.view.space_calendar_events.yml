@@ -1,0 +1,200 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: space_calendar_events
+label: 'Space Calendar Events'
+module: views
+description: 'Manage all calendar_event nodes from one place.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Space Calendar Events'
+      use_ajax: false
+      use_more: false
+      use_more_always: false
+      use_more_text: more
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: '›'
+            previous: '‹'
+            first: '«'
+            last: '»'
+          quantity: 9
+      style:
+        type: table
+        options:
+          grouping: {}
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: true
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            title: title
+            status: status
+            created: created
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            status:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: created
+          empty_table: false
+      row:
+        type: fields
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          label: 'Title'
+          exclude: false
+          type: string
+          settings:
+            link_to_entity: true
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          label: 'Published'
+          exclude: false
+          type: boolean
+          settings:
+            format: custom
+            format_custom_true: Published
+            format_custom_false: Unpublished
+          entity_type: node
+          entity_field: status
+          plugin_id: field
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          label: 'Created'
+          exclude: false
+          date_format: medium
+          custom_date_format: ''
+          timezone: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            calendar_event: calendar_event
+          group: 1
+          exposed: false
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Published status'
+            identifier: status
+            required: false
+            remember: false
+            multiple: false
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
+      cache:
+        type: tag
+      empty: {}
+      relationships: {}
+      arguments: {}
+      header: {}
+      footer: {}
+      display_extenders: {}
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {}
+  page_1:
+    id: page_1
+    display_title: 'Admin Page'
+    display_plugin: page
+    position: 1
+    display_options:
+      path: /admin/content/space-calendar-events
+      menu:
+        type: normal
+        title: 'Space Calendar Events'
+        description: 'Manage space calendar event nodes'
+        expanded: false
+        parent: system.admin_content
+        weight: 5
+        context: '0'
+        menu_name: admin
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {}

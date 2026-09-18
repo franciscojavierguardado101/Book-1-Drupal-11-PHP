@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.space_calendar.field_sc_label
+    - paragraphs.paragraphs_type.space_calendar
+id: paragraph.space_calendar.default
+targetEntityType: paragraph
+bundle: space_calendar
+mode: default
+content:
+  field_sc_label:
+    type: string
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

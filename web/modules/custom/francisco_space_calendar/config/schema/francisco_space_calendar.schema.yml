@@ -1,0 +1,13 @@
+francisco_space_calendar.settings:
+  type: config_object
+  label: 'Space Calendar settings'
+  mapping:
+    api_base_url:
+      type: string
+      label: 'API base URL'
+    api_key:
+      type: string
+      label: 'API key'
+    cache_max_age:
+      type: integer
+      label: 'Cache duration in seconds'

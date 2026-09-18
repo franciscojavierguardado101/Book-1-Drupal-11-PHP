@@ -1,0 +1,32 @@
+uuid: 01399440-93e3-4386-b838-cbd2d6c35f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.descriptive_content.field_descript_c_descript
+    - field.field.paragraph.descriptive_content.field_descript_c_title
+    - paragraphs.paragraphs_type.descriptive_content
+  module:
+    - text
+id: paragraph.descriptive_content.default
+targetEntityType: paragraph
+bundle: descriptive_content
+mode: default
+content:
+  field_descript_c_title:
+    type: string
+    label: above
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+  field_descript_c_descript:
+    type: text_default
+    label: above
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

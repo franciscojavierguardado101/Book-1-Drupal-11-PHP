@@ -1,0 +1,10 @@
+name: 'Francisco Space Calendar'
+type: module
+description: 'Provides a Space Calendar paragraph type with CMS-configurable NASA DONKI API integration for space weather events.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:views
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs

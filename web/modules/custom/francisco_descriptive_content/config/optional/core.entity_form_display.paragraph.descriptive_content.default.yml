@@ -1,0 +1,34 @@
+uuid: e9e5ecfa-e260-4ebb-b62b-9da472036d40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.descriptive_content.field_descript_c_descript
+    - field.field.paragraph.descriptive_content.field_descript_c_title
+    - paragraphs.paragraphs_type.descriptive_content
+  module:
+    - text
+id: paragraph.descriptive_content.default
+targetEntityType: paragraph
+bundle: descriptive_content
+mode: default
+content:
+  field_descript_c_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_descript_c_descript:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

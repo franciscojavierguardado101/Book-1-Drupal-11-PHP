@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {}
+id: earthquake_dashboard
+label: 'Earthquake Dashboard'
+icon_uuid: null
+icon_default: null
+description: 'Displays a real-time USGS earthquake dashboard with severity stats and a scrollable event list.'
+behavior_plugins: {}

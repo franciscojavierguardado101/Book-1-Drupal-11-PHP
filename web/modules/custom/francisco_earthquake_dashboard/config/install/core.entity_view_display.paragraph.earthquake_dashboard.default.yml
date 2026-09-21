@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.earthquake_dashboard.field_eq_label
+    - field.field.paragraph.earthquake_dashboard.field_eq_default_range
+    - paragraphs.paragraphs_type.earthquake_dashboard
+id: paragraph.earthquake_dashboard.default
+targetEntityType: paragraph
+bundle: earthquake_dashboard
+mode: default
+content:
+  field_eq_label:
+    type: string
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+  field_eq_default_range:
+    type: list_default
+    weight: 1
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.earthquake_dashboard.field_eq_label
+    - field.field.paragraph.earthquake_dashboard.field_eq_default_range
+    - paragraphs.paragraphs_type.earthquake_dashboard
+id: paragraph.earthquake_dashboard.default
+targetEntityType: paragraph
+bundle: earthquake_dashboard
+mode: default
+content:
+  field_eq_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. Global Earthquake Activity'
+    third_party_settings: {}
+  field_eq_default_range:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden: {}

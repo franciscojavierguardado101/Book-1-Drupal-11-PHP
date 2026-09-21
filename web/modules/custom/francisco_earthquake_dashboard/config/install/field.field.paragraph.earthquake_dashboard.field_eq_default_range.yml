@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eq_default_range
+    - paragraphs.paragraphs_type.earthquake_dashboard
+id: paragraph.earthquake_dashboard.field_eq_default_range
+field_name: field_eq_default_range
+entity_type: paragraph
+bundle: earthquake_dashboard
+label: 'Default time range'
+description: 'The time range shown by default when the dashboard first loads.'
+required: false
+translatable: true
+default_value:
+  - value: day
+default_value_callback: ''
+settings: {}
+field_type: list_string

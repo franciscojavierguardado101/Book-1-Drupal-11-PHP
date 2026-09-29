@@ -1,0 +1,8 @@
+name: 'Francisco APOD'
+type: module
+description: 'NASA Astronomy Picture of the Day paragraph type. CMS-configurable API key. Renders server-side via Twig and exposes a JSON endpoint for Next.js.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs

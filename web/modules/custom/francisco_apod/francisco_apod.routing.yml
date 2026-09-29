@@ -1,0 +1,17 @@
+francisco_apod.settings:
+  path: '/admin/config/services/apod'
+  defaults:
+    _form: '\Drupal\francisco_apod\Form\ApodSettingsForm'
+    _title: 'APOD API Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+francisco_apod.config_api:
+  path: '/api/apod/config'
+  defaults:
+    _controller: '\Drupal\francisco_apod\Controller\ApodController::getConfig'
+    _format: 'json'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

@@ -1,0 +1,57 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Francisco APOD module.
+ *
+ * Registers a Twig template inside this module (not the theme) so the
+ * component is fully self-contained and portable across any Drupal site.
+ * The theme can still override it by placing its own paragraph--apod.html.twig.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function francisco_apod_theme($existing, $type, $theme, $path): array {
+  return [
+    'paragraph__apod' => [
+      'base hook' => 'paragraph',
+      'template'  => 'paragraph--apod',
+      'path'      => $path . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_paragraph__apod().
+ *
+ * Fetches today's APOD from NASA and passes it to Twig as {{ apod }}.
+ * This is what "server-side rendered" means: PHP fetches the data,
+ * builds the variables, and Drupal renders the HTML — no client JS needed.
+ */
+function francisco_apod_preprocess_paragraph__apod(array &$variables): void {
+  try {
+    /** @var \GuzzleHttp\ClientInterface $client */
+    $client   = \Drupal::httpClient();
+    // New NASA APOD API — no API key required (public WordPress REST endpoint).
+    $response = $client->get('https://science.nasa.gov/wp-json/wp/v2/apod-basic', [
+      'query'   => ['per_page' => 1],
+      'timeout' => 8,
+    ]);
+    $items = json_decode((string) $response->getBody(), TRUE);
+    // API returns an array; grab the first item (today's APOD).
+    $variables['apod'] = is_array($items) ? ($items[0] ?? NULL) : $items;
+  }
+  catch (\Throwable $e) {
+    $variables['apod'] = NULL;
+    \Drupal::logger('francisco_apod')->error('APOD fetch failed: @msg', ['@msg' => $e->getMessage()]);
+  }
+
+  // Expose the section label set by the editor.
+  $variables['label'] = $variables['paragraph']->get('field_apod_label')->value ?? NULL;
+
+  // Attach the module CSS.
+  $variables['#attached']['library'][] = 'francisco_apod/apod';
+}

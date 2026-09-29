@@ -1,0 +1,12 @@
+langcode: en
+status: true
+id: paragraph.field_apod_label
+field_name: field_apod_label
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+module: core
+locked: false
+cardinality: 1
+translatable: true

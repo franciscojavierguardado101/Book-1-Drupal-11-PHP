@@ -1,0 +1,8 @@
+langcode: en
+status: true
+id: apod
+label: 'NASA APOD'
+description: 'Astronomy Picture of the Day — displays today''s NASA APOD with a random image gallery.'
+icon_uuid: null
+icon_default: ''
+behavior_plugins: {}

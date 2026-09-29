@@ -1,0 +1,13 @@
+francisco_apod.settings:
+  type: config_object
+  label: 'APOD settings'
+  mapping:
+    api_key:
+      type: string
+      label: 'NASA API key'
+    gallery_count:
+      type: integer
+      label: 'Number of random gallery images'
+    cache_max_age:
+      type: integer
+      label: 'Cache duration in seconds'

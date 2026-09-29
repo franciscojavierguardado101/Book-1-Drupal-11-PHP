@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_apod_label
+    - paragraphs.paragraphs_type.apod
+id: paragraph.apod.field_apod_label
+field_name: field_apod_label
+entity_type: paragraph
+bundle: apod
+label: 'Section Label'
+description: 'Optional heading shown above the APOD component. Leave blank to use the default.'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

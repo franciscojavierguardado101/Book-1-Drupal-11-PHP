@@ -1,0 +1,5 @@
+apod:
+  version: 1.x
+  css:
+    component:
+      css/apod.css: {}

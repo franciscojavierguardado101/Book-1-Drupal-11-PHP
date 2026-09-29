@@ -1,0 +1,65 @@
+{{ attach_library('francisco_apod/apod') }}
+{#
+  Variables provided by francisco_apod_preprocess_paragraph__apod():
+    apod  — associative array from NASA APOD API (or NULL on error)
+    label — optional section heading set by the editor
+#}
+<section{{ attributes.addClass('apod-section') }}>
+  <div class="apod-section__inner">
+
+    {# Section header #}
+    <div class="apod-section__header">
+      <div class="apod-section__line"></div>
+      <div class="apod-section__badge">{{ label ?: 'Astronomy Picture of the Day' }}</div>
+    </div>
+
+    {% if apod %}
+      <div class="apod-card">
+
+        {# Media — image or video iframe.
+           New API: hdurl = actual image, url = article permalink. #}
+        <div class="apod-card__media">
+          {% if apod.media_type == 'video' %}
+            <div class="apod-card__video-wrap">
+              <iframe
+                src="{{ apod.hdurl ?: apod.url }}"
+                title="{{ apod.title }}"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          {% else %}
+            <a href="{{ apod.permalink ?: apod.url }}" target="_blank" rel="noopener noreferrer" aria-label="View on NASA">
+              <img
+                src="{{ apod.hdurl }}"
+                alt="{{ apod.alt ?: apod.title }}"
+                loading="lazy"
+              />
+            </a>
+          {% endif %}
+        </div>
+
+        {# Details panel #}
+        <div class="apod-card__details">
+          <p class="apod-card__date">{{ apod.date }}</p>
+          <h2 class="apod-card__title">{{ apod.title }}</h2>
+          <div class="apod-card__explanation">{{ apod.explanation|striptags }}</div>
+          {% if apod.copyright %}
+            <p class="apod-card__credit">
+              <span class="apod-card__credit-label">Credit:</span>
+              {{ apod.copyright }}
+            </p>
+          {% endif %}
+        </div>
+
+      </div>
+    {% else %}
+      <p class="apod-section__error">
+        Could not load today's Astronomy Picture of the Day. Please check the API key in
+        <a href="/admin/config/services/apod">APOD settings</a>.
+      </p>
+    {% endif %}
+
+  </div>
+</section>

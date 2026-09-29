@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.apod.field_apod_label
+    - paragraphs.paragraphs_type.apod
+id: core.entity_view_display.paragraph.apod.default
+targetEntityType: paragraph
+bundle: apod
+mode: default
+content:
+  field_apod_label:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+hidden: {}

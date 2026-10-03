@@ -6,6 +6,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const nextConfig: NextConfig = {
+  // standalone only for Docker/Kubernetes — Vercel manages its own output format
+  output: process.env.VERCEL ? undefined : "standalone",
   async redirects() {
     return [
       {
@@ -33,6 +35,16 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "live-francisco-guardado-book-1.pantheonsite.io",
         pathname: "/sites/default/files/**",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.science.nasa.gov",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "apod.nasa.gov",
+        pathname: "/**",
       },
     ],
   },

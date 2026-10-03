@@ -4,6 +4,9 @@ import type { FeatureSpotData, FeatureSpotPosition, FeatureSpotBgColor } from "@
 import type { SpaceCalendarData } from "@/components/paragraphs/space-calendar";
 import type { DescriptiveContentData } from "@/components/paragraphs/descriptive-content";
 import type { EarthquakeDashboardData, TimeRange } from "@/components/paragraphs/earthquake-dashboard";
+import type { ApodData } from "@/components/paragraphs/apod";
+import type { IssTrackerData } from "@/components/paragraphs/iss-tracker";
+import type { NasaVideosData } from "@/components/paragraphs/nasa-videos";
 
 const DRUPAL_BASE = process.env.DRUPAL_BASE_URL ?? "https://francisco-guardado-book-1.ddev.site:33300";
 
@@ -59,6 +62,24 @@ export type ParagraphEarthquakeDashboard = {
   data: EarthquakeDashboardData;
 };
 
+export type ParagraphApod = {
+  type: "paragraph--apod";
+  id: string;
+  data: ApodData;
+};
+
+export type ParagraphIssTracker = {
+  type: "paragraph--iss_tracker";
+  id: string;
+  data: IssTrackerData;
+};
+
+export type ParagraphNasaVideos = {
+  type: "paragraph--nasa_videos";
+  id: string;
+  data: NasaVideosData;
+};
+
 export type ParagraphData =
   | ParagraphCarouselHero
   | ParagraphViewEmbed
@@ -67,7 +88,10 @@ export type ParagraphData =
   | ParagraphFeatureSpot
   | ParagraphSpaceCalendar
   | ParagraphDescriptiveContent
-  | ParagraphEarthquakeDashboard;
+  | ParagraphEarthquakeDashboard
+  | ParagraphApod
+  | ParagraphIssTracker
+  | ParagraphNasaVideos;
 
 // ─── JSON:API helpers ─────────────────────────────────────────────────────────
 
@@ -160,6 +184,12 @@ export async function getNodeComponents(
         return [parseDescriptiveContent(ref.id, included)];
       case "paragraph--earthquake_dashboard":
         return [parseEarthquakeDashboard(ref.id, included)];
+      case "paragraph--apod":
+        return [parseApod(ref.id, included)];
+      case "paragraph--iss_tracker":
+        return [parseIssTracker(ref.id, included)];
+      case "paragraph--nasa_videos":
+        return [parseNasaVideos(ref.id, included)];
       default: return [];
     }
   });
@@ -493,6 +523,58 @@ function parseEarthquakeDashboard(id: string, included: AnyResource[]): Paragrap
       id,
       heading: para?.attributes.field_eq_label ?? undefined,
       defaultRange,
+    },
+  };
+}
+
+function parseApod(id: string, included: AnyResource[]): ParagraphApod {
+  type ApiApod = AnyResource & {
+    attributes: { field_apod_label: string | null };
+  };
+
+  const para = findIncluded<ApiApod>(included, "paragraph--apod", id);
+  return {
+    type: "paragraph--apod",
+    id,
+    data: {
+      id,
+      heading: para?.attributes.field_apod_label ?? undefined,
+    },
+  };
+}
+
+function parseIssTracker(id: string, included: AnyResource[]): ParagraphIssTracker {
+  type ApiIssTracker = AnyResource & {
+    attributes: { field_iss_label: string | null };
+  };
+
+  const para = findIncluded<ApiIssTracker>(included, "paragraph--iss_tracker", id);
+  return {
+    type: "paragraph--iss_tracker",
+    id,
+    data: {
+      id,
+      heading: para?.attributes.field_iss_label ?? undefined,
+    },
+  };
+}
+
+function parseNasaVideos(id: string, included: AnyResource[]): ParagraphNasaVideos {
+  type ApiNasaVideos = AnyResource & {
+    attributes: {
+      field_nasa_v_label: string | null;
+      field_nasa_v_query: string | null;
+    };
+  };
+
+  const para = findIncluded<ApiNasaVideos>(included, "paragraph--nasa_videos", id);
+  return {
+    type: "paragraph--nasa_videos",
+    id,
+    data: {
+      id,
+      heading: para?.attributes.field_nasa_v_label ?? undefined,
+      defaultQuery: para?.attributes.field_nasa_v_query ?? undefined,
     },
   };
 }

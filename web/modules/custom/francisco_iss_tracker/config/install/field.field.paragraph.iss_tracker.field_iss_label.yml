@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_iss_label
+    - paragraphs.paragraphs_type.iss_tracker
+id: paragraph.iss_tracker.field_iss_label
+field_name: field_iss_label
+entity_type: paragraph
+bundle: iss_tracker
+label: 'Tracker heading'
+description: 'Optional heading displayed above the tracker on the frontend.'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

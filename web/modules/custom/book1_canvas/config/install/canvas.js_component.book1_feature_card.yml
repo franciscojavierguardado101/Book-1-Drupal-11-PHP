@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book1_canvas
+machineName: book1_feature_card
+name: 'Book 1 Feature Card'
+required:
+  - title
+props:
+  title:
+    title: Title
+    type: string
+    examples:
+      - 'About the Book'
+    contentMediaType: text/html
+    x-formatting-context: block
+  body:
+    title: Body Text
+    type: string
+    examples:
+      - 'A gripping debut novel that...'
+    contentMediaType: text/html
+    x-formatting-context: block
+  label:
+    title: Eyebrow Label
+    type: string
+    examples:
+      - 'Chapter One'
+  link_label:
+    title: Link Label
+    type: string
+    examples:
+      - 'Learn More'
+  link_url:
+    title: Link URL
+    type: string
+    examples:
+      - '/articles'
+  theme:
+    title: 'Theme (dark or light)'
+    type: string
+    examples:
+      - 'dark'
+slots: {}
+js:
+  original: |-
+    import FormattedText from '@/lib/FormattedText';
+
+    const Book1FeatureCard = ({ title, body, label, link_label, link_url, theme }) => {
+      const isDark = theme !== 'light';
+      const bg = isDark ? '#0f0f0f' : '#f5f4f0';
+      const titleColor = isDark ? '#fff' : '#111';
+      const bodyColor = isDark ? '#777' : '#555';
+      const mutedColor = isDark ? '#444' : '#aaa';
+      const borderColor = isDark ? '#1e1e1e' : '#e0e0e0';
+
+      return (
+        <div style={{
+          background: bg,
+          border: `1px solid ${borderColor}`,
+          padding: '60px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '24px',
+          maxWidth: '700px',
+        }}>
+          {label && (
+            <p style={{
+              color: mutedColor, fontSize: '11px', letterSpacing: '5px',
+              textTransform: 'uppercase', fontFamily: 'monospace',
+            }}>
+              {label}
+            </p>
+          )}
+          <h2 style={{
+            color: titleColor, fontSize: 'clamp(28px, 4vw, 48px)',
+            fontWeight: '600', lineHeight: '1.15', letterSpacing: '-1px',
+          }}>
+            {title ? <FormattedText>{title}</FormattedText> : ''}
+          </h2>
+          {body && (
+            <div style={{ color: bodyColor, fontSize: '17px', lineHeight: '1.8' }}>
+              <FormattedText>{body}</FormattedText>
+            </div>
+          )}
+          {link_label && (
+            <a href={link_url || '#'} style={{
+              color: titleColor, fontSize: '12px', letterSpacing: '3px',
+              textTransform: 'uppercase', textDecoration: 'none',
+              borderBottom: `1px solid ${mutedColor}`, paddingBottom: '2px',
+              alignSelf: 'flex-start', marginTop: '8px',
+            }}>
+              {link_label} →
+            </a>
+          )}
+        </div>
+      );
+    };
+
+    export default Book1FeatureCard;
+  compiled: ''
+css:
+  original: ''
+  compiled: ''
+dataDependencies: {}

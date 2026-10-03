@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book1_canvas
+machineName: book1_hero
+name: 'Book 1 Hero'
+required:
+  - heading
+props:
+  heading:
+    title: Heading
+    type: string
+    examples:
+      - 'Book 1 by Francisco Guardado'
+    contentMediaType: text/html
+    x-formatting-context: block
+  subheading:
+    title: Subheading
+    type: string
+    examples:
+      - 'An unforgettable story.'
+    contentMediaType: text/html
+    x-formatting-context: block
+  cta_label:
+    title: 'CTA Button Label'
+    type: string
+    examples:
+      - 'Read Now'
+  cta_url:
+    title: 'CTA Button URL'
+    type: string
+    examples:
+      - '/articles'
+slots: {}
+js:
+  original: |-
+    import FormattedText from '@/lib/FormattedText';
+
+    const Book1Hero = ({ heading, subheading, cta_label, cta_url }) => (
+      <section style={{
+        background: '#0f0f0f',
+        minHeight: '90vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        padding: '80px 40px',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'radial-gradient(ellipse at 50% 60%, rgba(99,102,241,0.08) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+        <p style={{
+          color: '#666', fontSize: '13px', letterSpacing: '6px',
+          textTransform: 'uppercase', marginBottom: '28px', fontFamily: 'monospace',
+        }}>
+          Francisco Guardado
+        </p>
+        <h1 style={{
+          color: '#ffffff', fontSize: 'clamp(48px, 8vw, 96px)',
+          fontWeight: '600', lineHeight: '1.05', letterSpacing: '-2px',
+          maxWidth: '900px', marginBottom: '32px',
+        }}>
+          {heading ? <FormattedText>{heading}</FormattedText> : 'Book 1'}
+        </h1>
+        {subheading && (
+          <p style={{
+            color: '#888', fontSize: 'clamp(16px, 2vw, 22px)',
+            maxWidth: '600px', lineHeight: '1.7', marginBottom: '48px',
+          }}>
+            <FormattedText>{subheading}</FormattedText>
+          </p>
+        )}
+        {cta_label && (
+          <a href={cta_url || '#'} style={{
+            display: 'inline-block', padding: '14px 36px',
+            border: '1px solid rgba(255,255,255,0.2)',
+            color: '#fff', textDecoration: 'none',
+            fontSize: '13px', letterSpacing: '3px', textTransform: 'uppercase',
+            transition: 'all 0.2s',
+          }}
+          onMouseEnter={e => { e.target.style.background = 'rgba(255,255,255,0.05)'; }}
+          onMouseLeave={e => { e.target.style.background = 'transparent'; }}
+          >
+            {cta_label}
+          </a>
+        )}
+      </section>
+    );
+
+    export default Book1Hero;
+  compiled: ''
+css:
+  original: ''
+  compiled: ''
+dataDependencies: {}

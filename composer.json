@@ -25,7 +25,9 @@
         "drupal/paragraphs_ee": "^10.1",
         "drupal/paragraphs_features": "^2.2",
         "drupal/entity_reference_revisions": "^1.14",
-        "drupal/jsonapi_menu_items": "^1.2"
+        "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/canvas": "^1.12",
+        "drupal/canvas_bootstrap": "^1.0"
     },
     "require-dev": {
         "drupal/core-dev": "^11"

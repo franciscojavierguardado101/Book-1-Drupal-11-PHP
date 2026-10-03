@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book1_canvas
+machineName: book1_articles_grid
+name: 'Book 1 Articles Grid'
+required: []
+props:
+  heading:
+    title: Section Heading
+    type: string
+    examples:
+      - 'Latest Articles'
+  limit:
+    title: Number of Articles
+    type: string
+    examples:
+      - '6'
+slots: {}
+js:
+  original: |-
+    import { DrupalJsonApiParams } from 'drupal-jsonapi-params';
+    import useSWR from 'swr';
+    import { JsonApiClient } from '@drupal-api-client/json-api-client';
+
+    const client = new JsonApiClient();
+
+    const Book1ArticlesGrid = ({ heading, limit }) => {
+      const count = parseInt(limit || '6', 10);
+
+      const { data, isLoading } = useSWR(
+        ['node--article', {
+          queryString: new DrupalJsonApiParams()
+            .addFilter('status', '1')
+            .addSort('created', 'DESC')
+            .addPageLimit(count)
+            .getQueryString(),
+        }],
+        ([type, options]) => client.getCollection(type, options),
+      );
+
+      const articles = isLoading
+        ? Array(count).fill().map((_, i) => ({ id: i, _placeholder: true }))
+        : (data || []);
+
+      return (
+        <section style={{ background: '#111', padding: '80px 40px' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            {heading && (
+              <h2 style={{
+                color: '#fff', fontSize: '13px', letterSpacing: '6px',
+                textTransform: 'uppercase', marginBottom: '48px', fontFamily: 'monospace',
+              }}>
+                {heading}
+              </h2>
+            )}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gap: '2px',
+            }}>
+              {articles.map((article) => (
+                <a
+                  key={article.id}
+                  href={article._placeholder ? '#' : `/articles/${article.drupal_internal__nid}`}
+                  style={{
+                    display: 'block', background: '#1a1a1a', padding: '40px',
+                    textDecoration: 'none', transition: 'background 0.2s',
+                    opacity: article._placeholder ? 0.3 : 1,
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = '#222'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = '#1a1a1a'; }}
+                >
+                  <p style={{
+                    color: '#555', fontSize: '11px', letterSpacing: '3px',
+                    textTransform: 'uppercase', marginBottom: '16px', fontFamily: 'monospace',
+                  }}>
+                    {article.created ? new Date(article.created).getFullYear() : '—'}
+                  </p>
+                  <h3 style={{
+                    color: '#fff', fontSize: '20px', fontWeight: '500',
+                    lineHeight: '1.4', marginBottom: '16px',
+                  }}>
+                    {article.title || '████████████'}
+                  </h3>
+                  <span style={{
+                    color: '#555', fontSize: '11px', letterSpacing: '2px',
+                    textTransform: 'uppercase', fontFamily: 'monospace',
+                  }}>
+                    Read →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    export default Book1ArticlesGrid;
+  compiled: ''
+css:
+  original: ''
+  compiled: ''
+dataDependencies: {}

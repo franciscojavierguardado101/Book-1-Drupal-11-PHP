@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nasa_videos.field_nasa_v_label
+    - field.field.paragraph.nasa_videos.field_nasa_v_query
+    - paragraphs.paragraphs_type.nasa_videos
+id: paragraph.nasa_videos.default
+targetEntityType: paragraph
+bundle: nasa_videos
+mode: default
+content:
+  field_nasa_v_label:
+    type: string
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+  field_nasa_v_query:
+    type: string
+    weight: 1
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {}
+id: iss_tracker
+label: 'ISS Tracker'
+icon_uuid: null
+icon_default: null
+description: 'Displays a live International Space Station tracker with map, position data, and crew information.'
+behavior_plugins: {}

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.iss_tracker.field_iss_label
+    - paragraphs.paragraphs_type.iss_tracker
+id: paragraph.iss_tracker.default
+targetEntityType: paragraph
+bundle: iss_tracker
+mode: default
+content:
+  field_iss_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. ISS Live Tracker'
+    third_party_settings: {}
+hidden: {}

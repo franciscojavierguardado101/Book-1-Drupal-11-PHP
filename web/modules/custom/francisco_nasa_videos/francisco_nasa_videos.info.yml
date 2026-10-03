@@ -1,0 +1,9 @@
+name: 'Francisco NASA Videos'
+type: module
+description: 'Provides a NASA Video Library paragraph type that displays a searchable feed of NASA science videos on any page.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs

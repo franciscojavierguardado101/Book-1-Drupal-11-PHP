@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {}
+id: nasa_videos
+label: 'NASA Video Library'
+icon_uuid: null
+icon_default: null
+description: 'Displays a searchable feed of NASA science videos with a grid layout and inline video player.'
+behavior_plugins: {}

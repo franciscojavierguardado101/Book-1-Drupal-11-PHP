@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nasa_v_label
+    - paragraphs.paragraphs_type.nasa_videos
+id: paragraph.nasa_videos.field_nasa_v_label
+field_name: field_nasa_v_label
+entity_type: paragraph
+bundle: nasa_videos
+label: 'Section heading'
+description: 'Optional heading displayed above the video library.'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

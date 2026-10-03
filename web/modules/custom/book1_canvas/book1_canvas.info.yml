@@ -1,0 +1,7 @@
+name: 'Book 1 Canvas Components'
+type: module
+description: 'Custom Canvas components for the Book 1 author site.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - canvas:canvas

@@ -1,0 +1,9 @@
+name: 'Francisco ISS Tracker'
+type: module
+description: 'Provides an ISS Tracker paragraph type that displays a live International Space Station tracker with map and crew data on any page.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.iss_tracker.field_iss_label
+    - paragraphs.paragraphs_type.iss_tracker
+id: paragraph.iss_tracker.default
+targetEntityType: paragraph
+bundle: iss_tracker
+mode: default
+content:
+  field_iss_label:
+    type: string
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

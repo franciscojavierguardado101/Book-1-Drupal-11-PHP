@@ -1,0 +1,20 @@
+name: Keep Sites Awake
+
+on:
+  schedule:
+    - cron: "*/45 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Pantheon Dev
+        run: |
+          curl -s -o /dev/null -w "Pantheon: %{http_code}\n" \
+            https://dev-francisco-guardado-book-1.pantheonsite.io
+
+      - name: Ping Vercel Frontend
+        run: |
+          curl -s -o /dev/null -w "Vercel: %{http_code}\n" \
+            https://franciscojavierguardado101-book-1-f.vercel.app

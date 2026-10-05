@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pdf_editor.field_pdf_label
+    - paragraphs.paragraphs_type.pdf_editor
+id: paragraph.pdf_editor.default
+targetEntityType: paragraph
+bundle: pdf_editor
+mode: default
+content:
+  field_pdf_label:
+    type: string
+    weight: 0
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    region: content
+hidden: {}

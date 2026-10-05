@@ -1,0 +1,8 @@
+langcode: en
+status: true
+id: pdf_editor
+label: 'PDF Editor'
+description: 'Drag-and-drop PDF field editor with download.'
+icon_uuid: null
+icon_default: false
+behavior_plugins: {}

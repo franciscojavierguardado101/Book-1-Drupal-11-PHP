@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Francisco PDF Editor module.
+ *
+ * Provides the pdf_editor paragraph type which renders a drag-and-drop PDF
+ * field editor via the Next.js frontend. Users upload a PDF, place text,
+ * signature, date, and checkbox fields, then download the filled PDF.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function francisco_pdf_editor_help(string $route_name, RouteMatchInterface $route_match): string {
+  if ($route_name === 'help.page.francisco_pdf_editor') {
+    return '<p>' . t(
+      'Provides the <strong>PDF Editor</strong> paragraph type. Add it to any page to embed a drag-and-drop PDF editor where users can place text, signature, date, and checkbox fields onto any uploaded PDF and download the result.'
+    ) . '</p>';
+  }
+  return '';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function francisco_pdf_editor_theme(): array {
+  return [
+    'paragraph__pdf_editor' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}

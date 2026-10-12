@@ -1,0 +1,21 @@
+uuid: 1ba4c155-0655-4d13-8456-e9186af14a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_api_path
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+id: paragraph.nasa_fireball_chart.field_chart_api_path
+field_name: field_chart_api_path
+entity_type: paragraph
+bundle: nasa_fireball_chart
+label: 'Chart Data API Path'
+description: 'Next.js API route that returns chart data JSON.'
+required: false
+translatable: true
+default_value:
+  -
+    value: /api/nasa-fireball-chart
+default_value_callback: ''
+settings: {  }
+field_type: string

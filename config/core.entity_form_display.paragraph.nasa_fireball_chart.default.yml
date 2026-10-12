@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.nasa_fireball_chart.field_chart_api_path
+    - field.field.paragraph.nasa_fireball_chart.field_chart_csv_path
     - field.field.paragraph.nasa_fireball_chart.field_chart_label
     - field.field.paragraph.nasa_fireball_chart.field_chart_limit
+    - field.field.paragraph.nasa_fireball_chart.field_chart_source
     - field.field.paragraph.nasa_fireball_chart.field_chart_type
     - paragraphs.paragraphs_type.nasa_fireball_chart
 _core:
@@ -14,6 +17,22 @@ targetEntityType: paragraph
 bundle: nasa_fireball_chart
 mode: default
 content:
+  field_chart_api_path:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: /api/nasa-fireball-chart
+    third_party_settings: {  }
+  field_chart_csv_path:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: /api/nasa-fireball-csv
+    third_party_settings: {  }
   field_chart_label:
     type: string_textfield
     weight: 0
@@ -28,6 +47,14 @@ content:
     region: content
     settings:
       placeholder: '25'
+    third_party_settings: {  }
+  field_chart_source:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: 'NASA/JPL CNEOS Fireball API'
     third_party_settings: {  }
   field_chart_type:
     type: options_select

@@ -1,0 +1,10 @@
+name: 'Francisco NASA Fireball'
+type: module
+description: 'NASA/CNEOS fireball and bolide event data content type with numerical fields and a CSV export via Views Data Export.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:views
+  - views_data_export:views_data_export
+  - csv_serialization:csv_serialization

@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for the NASA Fireball module.
+ *
+ * Fetches the 100 most energetic fireball events from the NASA/CNEOS Fireball
+ * API and stores them as published nasa_fireball nodes.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_install().
+ */
+function francisco_nasa_fireball_install() {
+  $url = 'https://ssd-api.jpl.nasa.gov/fireball.api?limit=100&sort=energy';
+
+  try {
+    $response = \Drupal::httpClient()->get($url, ['timeout' => 15]);
+    $body = (string) $response->getBody();
+    $data = json_decode($body, TRUE);
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('francisco_nasa_fireball')->warning(
+      'Could not fetch NASA Fireball API data on install: @msg. No nodes were created.',
+      ['@msg' => $e->getMessage()]
+    );
+    return;
+  }
+
+  if (empty($data['data']) || empty($data['fields'])) {
+    return;
+  }
+
+  $fields = array_flip($data['fields']);
+
+  foreach ($data['data'] as $row) {
+    $date      = $row[$fields['date']]      ?? NULL;
+    $energy    = $row[$fields['energy']]    ?? NULL;
+    $impactE   = $row[$fields['impact-e']]  ?? NULL;
+    $lat       = $row[$fields['lat']]       ?? NULL;
+    $latDir    = $row[$fields['lat-dir']]   ?? NULL;
+    $lon       = $row[$fields['lon']]       ?? NULL;
+    $lonDir    = $row[$fields['lon-dir']]   ?? NULL;
+    $alt       = $row[$fields['alt']]       ?? NULL;
+    $vel       = $row[$fields['vel']]       ?? NULL;
+
+    if (!$date) {
+      continue;
+    }
+
+    // Convert lat/lon to signed decimals (N/E = positive, S/W = negative).
+    $signedLat = ($lat !== NULL) ? (float) $lat * ($latDir === 'S' ? -1 : 1) : NULL;
+    $signedLon = ($lon !== NULL) ? (float) $lon * ($lonDir === 'W' ? -1 : 1) : NULL;
+
+    $node = Node::create([
+      'type'   => 'nasa_fireball',
+      'title'  => $date,
+      'status' => 1,
+      'field_fireball_energy'        => $energy  !== NULL ? (float) $energy  : NULL,
+      'field_fireball_impact_energy' => $impactE !== NULL ? (float) $impactE : NULL,
+      'field_fireball_velocity'      => $vel     !== NULL ? (float) $vel     : NULL,
+      'field_fireball_altitude'      => $alt     !== NULL ? (float) $alt     : NULL,
+      'field_fireball_latitude'      => $signedLat,
+      'field_fireball_longitude'     => $signedLon,
+    ]);
+
+    $node->save();
+  }
+
+  \Drupal::logger('francisco_nasa_fireball')->info(
+    'Imported @count NASA fireball events.',
+    ['@count' => count($data['data'])]
+  );
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function francisco_nasa_fireball_uninstall() {
+  $nids = \Drupal::entityQuery('node')
+    ->condition('type', 'nasa_fireball')
+    ->accessCheck(FALSE)
+    ->execute();
+
+  if ($nids) {
+    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes   = $storage->loadMultiple($nids);
+    $storage->delete($nodes);
+  }
+}

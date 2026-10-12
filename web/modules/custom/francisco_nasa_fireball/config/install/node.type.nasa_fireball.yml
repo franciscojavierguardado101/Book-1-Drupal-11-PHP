@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: 'NASA Fireball'
+type: nasa_fireball
+description: 'NASA/CNEOS fireball and bolide event data including energy, velocity, altitude, and impact estimates.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

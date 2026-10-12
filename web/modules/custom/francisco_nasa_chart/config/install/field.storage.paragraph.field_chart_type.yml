@@ -1,0 +1,19 @@
+langcode: en
+status: true
+id: paragraph.field_chart_type
+field_name: field_chart_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    - value: bar
+      label: 'Bar — Top Events by Radiated Energy'
+    - value: line
+      label: 'Line — Energy Over Time'
+    - value: scatter
+      label: 'Scatter — Velocity vs Impact Energy'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false

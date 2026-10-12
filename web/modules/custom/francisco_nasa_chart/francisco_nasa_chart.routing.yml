@@ -1,0 +1,8 @@
+francisco_nasa_chart.api_data:
+  path: '/api/nasa-fireball-chart'
+  defaults:
+    _controller: '\Drupal\francisco_nasa_chart\Controller\NasaFireballChartController::getData'
+    _title: 'NASA Fireball Chart Data'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]

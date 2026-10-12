@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_type
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+id: paragraph.nasa_fireball_chart.field_chart_type
+field_name: field_chart_type
+entity_type: paragraph
+bundle: nasa_fireball_chart
+label: 'Default Chart Type'
+description: 'The chart type shown when the component first loads. The visitor can switch between types interactively.'
+required: false
+translatable: false
+default_value:
+  - value: bar
+default_value_callback: ''
+settings: {}
+field_type: list_string

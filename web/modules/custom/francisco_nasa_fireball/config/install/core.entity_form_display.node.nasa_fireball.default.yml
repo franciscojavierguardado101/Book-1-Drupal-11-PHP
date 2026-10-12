@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nasa_fireball.field_fireball_energy
+    - field.field.node.nasa_fireball.field_fireball_impact_energy
+    - field.field.node.nasa_fireball.field_fireball_velocity
+    - field.field.node.nasa_fireball.field_fireball_altitude
+    - field.field.node.nasa_fireball.field_fireball_latitude
+    - field.field.node.nasa_fireball.field_fireball_longitude
+    - node.type.nasa_fireball
+  module:
+    - node
+id: node.nasa_fireball.default
+targetEntityType: node
+bundle: nasa_fireball
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_energy:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_impact_energy:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_velocity:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_altitude:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_latitude:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+  field_fireball_longitude:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {}
+hidden: {}

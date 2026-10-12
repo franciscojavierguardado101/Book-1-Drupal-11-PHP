@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fireball_energy
+    - node.type.nasa_fireball
+id: node.nasa_fireball.field_fireball_energy
+field_name: field_fireball_energy
+entity_type: node
+bundle: nasa_fireball
+label: 'Total Radiated Energy (J ×10¹⁰)'
+description: 'Total radiated energy of the fireball event in joules (×10¹⁰), as reported by NASA/CNEOS.'
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: decimal

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+id: node.field_fireball_velocity
+field_name: field_fireball_velocity
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true

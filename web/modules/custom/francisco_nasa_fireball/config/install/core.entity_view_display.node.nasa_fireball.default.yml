@@ -1,0 +1,85 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nasa_fireball.field_fireball_energy
+    - field.field.node.nasa_fireball.field_fireball_impact_energy
+    - field.field.node.nasa_fireball.field_fireball_velocity
+    - field.field.node.nasa_fireball.field_fireball_altitude
+    - field.field.node.nasa_fireball.field_fireball_latitude
+    - field.field.node.nasa_fireball.field_fireball_longitude
+    - node.type.nasa_fireball
+  module:
+    - node
+id: node.nasa_fireball.default
+targetEntityType: node
+bundle: nasa_fireball
+mode: default
+content:
+  field_fireball_energy:
+    type: number_decimal
+    weight: 1
+    label: above
+    region: content
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 4
+      prefix_suffix: true
+    third_party_settings: {}
+  field_fireball_impact_energy:
+    type: number_decimal
+    weight: 2
+    label: above
+    region: content
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 4
+      prefix_suffix: true
+    third_party_settings: {}
+  field_fireball_velocity:
+    type: number_decimal
+    weight: 3
+    label: above
+    region: content
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {}
+  field_fireball_altitude:
+    type: number_decimal
+    weight: 4
+    label: above
+    region: content
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {}
+  field_fireball_latitude:
+    type: number_decimal
+    weight: 5
+    label: above
+    region: content
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 4
+      prefix_suffix: true
+    third_party_settings: {}
+  field_fireball_longitude:
+    type: number_decimal
+    weight: 6
+    label: above
+    region: content
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 4
+      prefix_suffix: true
+    third_party_settings: {}
+hidden: {}

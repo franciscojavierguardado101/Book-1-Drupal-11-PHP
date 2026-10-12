@@ -1,0 +1,10 @@
+name: 'Francisco NASA Fireball Chart'
+type: module
+description: 'Paragraph component that renders interactive bar, line, and scatter charts from NASA fireball node data. Exposes a JSON endpoint consumed by the Next.js frontend.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:paragraphs
+  - entity_reference_revisions:entity_reference_revisions
+  - francisco_nasa_fireball:francisco_nasa_fireball

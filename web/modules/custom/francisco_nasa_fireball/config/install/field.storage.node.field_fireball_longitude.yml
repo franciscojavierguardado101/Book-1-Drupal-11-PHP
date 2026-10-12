@@ -1,0 +1,13 @@
+langcode: en
+status: true
+id: node.field_fireball_longitude
+field_name: field_fireball_longitude
+entity_type: node
+type: decimal
+settings:
+  precision: 9
+  scale: 4
+module: core
+locked: false
+cardinality: 1
+translatable: true

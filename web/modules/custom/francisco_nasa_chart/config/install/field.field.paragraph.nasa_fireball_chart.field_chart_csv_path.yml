@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_csv_path
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+id: paragraph.nasa_fireball_chart.field_chart_csv_path
+field_name: field_chart_csv_path
+entity_type: paragraph
+bundle: nasa_fireball_chart
+label: 'CSV Download Path'
+description: 'Next.js API route that returns the CSV file download. e.g. /api/nasa-fireball-csv'
+required: false
+translatable: false
+default_value:
+  - value: '/api/nasa-fireball-csv'
+default_value_callback: ''
+settings: {}
+field_type: string

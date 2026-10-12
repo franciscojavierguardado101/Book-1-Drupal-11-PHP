@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_source
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+id: paragraph.nasa_fireball_chart.field_chart_source
+field_name: field_chart_source
+entity_type: paragraph
+bundle: nasa_fireball_chart
+label: 'Data Source Attribution'
+description: 'Attribution text shown below the chart. e.g. NASA/JPL CNEOS Fireball API'
+required: false
+translatable: false
+default_value:
+  - value: 'NASA/JPL CNEOS Fireball API'
+default_value_callback: ''
+settings: {}
+field_type: string

@@ -29,6 +29,77 @@ function francisco_nasa_chart_install() {
 }
 
 /**
+ * Adds field_chart_api_path, field_chart_csv_path, field_chart_source to the
+ * nasa_fireball_chart paragraph so chart endpoints are CMS-configurable.
+ */
+function francisco_nasa_chart_update_9001() {
+  $new_fields = [
+    'field_chart_api_path' => [
+      'label'       => 'Chart Data API Path',
+      'description' => 'Next.js API route that returns chart data JSON.',
+      'default'     => '/api/nasa-fireball-chart',
+    ],
+    'field_chart_csv_path' => [
+      'label'       => 'CSV Download Path',
+      'description' => 'Next.js API route that returns the CSV file download.',
+      'default'     => '/api/nasa-fireball-csv',
+    ],
+    'field_chart_source' => [
+      'label'       => 'Data Source Attribution',
+      'description' => 'Attribution text shown below the chart.',
+      'default'     => 'NASA/JPL CNEOS Fireball API',
+    ],
+  ];
+
+  foreach ($new_fields as $field_name => $info) {
+    // Create field storage if it doesn't exist.
+    if (!\Drupal\field\Entity\FieldStorageConfig::loadByName('paragraph', $field_name)) {
+      \Drupal\field\Entity\FieldStorageConfig::create([
+        'field_name'  => $field_name,
+        'entity_type' => 'paragraph',
+        'type'        => 'string',
+        'settings'    => ['max_length' => 255],
+        'cardinality' => 1,
+        'translatable' => FALSE,
+      ])->save();
+    }
+
+    // Create field instance on nasa_fireball_chart if it doesn't exist.
+    if (!\Drupal\field\Entity\FieldConfig::loadByName('paragraph', 'nasa_fireball_chart', $field_name)) {
+      \Drupal\field\Entity\FieldConfig::create([
+        'field_name'    => $field_name,
+        'entity_type'   => 'paragraph',
+        'bundle'        => 'nasa_fireball_chart',
+        'label'         => $info['label'],
+        'description'   => $info['description'],
+        'required'      => FALSE,
+        'default_value' => [['value' => $info['default']]],
+      ])->save();
+    }
+
+    // Add to form display.
+    $form_display = \Drupal\Core\Entity\Entity\EntityFormDisplay::load('paragraph.nasa_fireball_chart.default');
+    if ($form_display && !$form_display->getComponent($field_name)) {
+      $form_display->setComponent($field_name, [
+        'type'     => 'string_textfield',
+        'weight'   => 10,
+        'settings' => ['size' => 60, 'placeholder' => $info['default']],
+      ])->save();
+    }
+
+    // Add to view display.
+    $view_display = \Drupal\Core\Entity\Entity\EntityViewDisplay::load('paragraph.nasa_fireball_chart.default');
+    if ($view_display && !$view_display->getComponent($field_name)) {
+      $view_display->setComponent($field_name, [
+        'type'   => 'string',
+        'weight' => 10,
+        'label'  => 'above',
+      ])->save();
+    }
+  }
+}
+
+/**
  * Implements hook_uninstall().
  */
 function francisco_nasa_chart_uninstall() {

@@ -1,0 +1,21 @@
+uuid: 4d7c76e4-20b0-4bde-992e-57b5796b0a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_bg_color
+    - node.type.article
+  module:
+    - options
+id: node.article.field_article_bg_color
+field_name: field_article_bg_color
+entity_type: node
+bundle: article
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

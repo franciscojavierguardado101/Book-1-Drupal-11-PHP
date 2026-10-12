@@ -1,0 +1,254 @@
+uuid: e48b7dbb-055c-460e-84eb-6a11a363264f
+langcode: en
+status: true
+dependencies: {  }
+machineName: teaser_list
+name: teaser_list
+required: {  }
+props:
+  sectionTitle:
+    type: string
+    title: sectionTitle
+slots:
+  items:
+    title: items
+js:
+  original: |-
+    import { useState, useEffect } from 'react';
+
+    const TeaserList = ({ sectionTitle, slots }) => {
+      const [view, setView] = useState('list');
+
+      useEffect(() => {
+        const r = document.documentElement;
+        if (view === 'list') {
+          r.style.setProperty('--tl-art-display', 'block');
+          r.style.setProperty('--tl-art-w', '100%');
+          r.style.setProperty('--tl-art-max-w', '1200px');
+          r.style.setProperty('--tl-art-ml', 'auto');
+          r.style.setProperty('--tl-art-mr', 'auto');
+          r.style.setProperty('--tl-art-mb', '0');
+          r.style.setProperty('--tl-art-p', '0');
+          r.style.setProperty('--tl-art-vt', 'top');
+          r.style.setProperty('--tl-bg', 'transparent');
+          r.style.setProperty('--tl-flex', 'row');
+          r.style.setProperty('--tl-thumb-w', '280px');
+          r.style.setProperty('--tl-thumb-h', '157px');
+          r.style.setProperty('--tl-pad', '0 0 0 24px');
+          r.style.setProperty('--tl-a-pad', '20px 0');
+          r.style.setProperty('--tl-border-b', '1px solid #2a2a2a');
+        } else {                                    
+          r.style.setProperty('--tl-art-display', 'inline-block');                                                                               
+          r.style.setProperty('--tl-art-w', '32%');                                                                                              
+          r.style.setProperty('--tl-art-max-w', 'none');                                                                                         
+          r.style.setProperty('--tl-art-ml', '40px');       // ← was 0, now adds left offset                                                     
+          r.style.setProperty('--tl-art-mr', '0');                                                                                               
+          r.style.setProperty('--tl-art-mb', '24px');                                                                                            
+          r.style.setProperty('--tl-art-p', '0');           // ← was 8px, removes card padding                                                   
+          r.style.setProperty('--tl-art-vt', 'top');                                                                                             
+          r.style.setProperty('--tl-bg', 'transparent');    // ← was #1a1a1a, removes gray box                                                   
+          r.style.setProperty('--tl-border-b', 'none');     // ← NEW, kills the border line                                                      
+          r.style.setProperty('--tl-flex', 'column');                                                                                            
+          r.style.setProperty('--tl-thumb-w', '100%');                                                                                           
+          r.style.setProperty('--tl-thumb-h', '240px');     // ← was 180px, taller images                                                        
+          r.style.setProperty('--tl-pad', '12px 0 0 0');                                                                                         
+          r.style.setProperty('--tl-a-pad', '0');                                                                                                
+        }  
+      }, [view]);
+
+      const btnBase = { background: 'none', border: '1px solid #444', color: '#aaa',
+        cursor: 'pointer', padding: '6px 12px', fontSize: '11px', fontFamily: 'monospace', letterSpacing: '1px' };
+      const btnActive = { ...btnBase, borderColor: '#fff', background: '#fff', color: '#000' };
+
+      return (
+        <section style={{ backgroundColor: '#111', padding: '48px 40px' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+              {sectionTitle && <p style={{ color: '#666', fontSize: '11px', letterSpacing: '4px',
+                textTransform: 'uppercase', fontFamily: 'monospace', margin: 0 }}>{sectionTitle}</p>}
+              <div style={{ display: 'flex', gap: '8px', marginLeft: 'auto' }}>
+                <button style={view === 'list' ? btnActive : btnBase} onClick={() => setView('list')}>☰ List</button>
+                <button style={view === 'grid' ? btnActive : btnBase} onClick={() => setView('grid')}>⊞ Grid</button>
+              </div>
+            </div>
+          </div>
+          <div>{slots?.items}</div>
+        </section>
+      );
+    };
+
+    export default TeaserList;
+  compiled: |
+    function _define_property(obj, key, value) {
+        if (key in obj) {
+            Object.defineProperty(obj, key, {
+                value: value,
+                enumerable: true,
+                configurable: true,
+                writable: true
+            });
+        } else {
+            obj[key] = value;
+        }
+        return obj;
+    }
+    function _object_spread(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i] != null ? arguments[i] : {};
+            var ownKeys = Object.keys(source);
+            if (typeof Object.getOwnPropertySymbols === "function") {
+                ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+                    return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+                }));
+            }
+            ownKeys.forEach(function(key) {
+                _define_property(target, key, source[key]);
+            });
+        }
+        return target;
+    }
+    function ownKeys(object, enumerableOnly) {
+        var keys = Object.keys(object);
+        if (Object.getOwnPropertySymbols) {
+            var symbols = Object.getOwnPropertySymbols(object);
+            if (enumerableOnly) {
+                symbols = symbols.filter(function(sym) {
+                    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+                });
+            }
+            keys.push.apply(keys, symbols);
+        }
+        return keys;
+    }
+    function _object_spread_props(target, source) {
+        source = source != null ? source : {};
+        if (Object.getOwnPropertyDescriptors) {
+            Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        } else {
+            ownKeys(Object(source)).forEach(function(key) {
+                Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+            });
+        }
+        return target;
+    }
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    import { useState, useEffect } from 'react';
+    const TeaserList = ({ sectionTitle, slots })=>{
+        const [view, setView] = useState('list');
+        useEffect(()=>{
+            const r = document.documentElement;
+            if (view === 'list') {
+                r.style.setProperty('--tl-art-display', 'block');
+                r.style.setProperty('--tl-art-w', '100%');
+                r.style.setProperty('--tl-art-max-w', '1200px');
+                r.style.setProperty('--tl-art-ml', 'auto');
+                r.style.setProperty('--tl-art-mr', 'auto');
+                r.style.setProperty('--tl-art-mb', '0');
+                r.style.setProperty('--tl-art-p', '0');
+                r.style.setProperty('--tl-art-vt', 'top');
+                r.style.setProperty('--tl-bg', 'transparent');
+                r.style.setProperty('--tl-flex', 'row');
+                r.style.setProperty('--tl-thumb-w', '280px');
+                r.style.setProperty('--tl-thumb-h', '157px');
+                r.style.setProperty('--tl-pad', '0 0 0 24px');
+                r.style.setProperty('--tl-a-pad', '20px 0');
+                r.style.setProperty('--tl-border-b', '1px solid #2a2a2a');
+            } else {
+                r.style.setProperty('--tl-art-display', 'inline-block');
+                r.style.setProperty('--tl-art-w', '32%');
+                r.style.setProperty('--tl-art-max-w', 'none');
+                r.style.setProperty('--tl-art-ml', '40px'); // ← was 0, now adds left offset                                                     
+                r.style.setProperty('--tl-art-mr', '0');
+                r.style.setProperty('--tl-art-mb', '24px');
+                r.style.setProperty('--tl-art-p', '0'); // ← was 8px, removes card padding                                                   
+                r.style.setProperty('--tl-art-vt', 'top');
+                r.style.setProperty('--tl-bg', 'transparent'); // ← was #1a1a1a, removes gray box                                                   
+                r.style.setProperty('--tl-border-b', 'none'); // ← NEW, kills the border line                                                      
+                r.style.setProperty('--tl-flex', 'column');
+                r.style.setProperty('--tl-thumb-w', '100%');
+                r.style.setProperty('--tl-thumb-h', '240px'); // ← was 180px, taller images                                                        
+                r.style.setProperty('--tl-pad', '12px 0 0 0');
+                r.style.setProperty('--tl-a-pad', '0');
+            }
+        }, [
+            view
+        ]);
+        const btnBase = {
+            background: 'none',
+            border: '1px solid #444',
+            color: '#aaa',
+            cursor: 'pointer',
+            padding: '6px 12px',
+            fontSize: '11px',
+            fontFamily: 'monospace',
+            letterSpacing: '1px'
+        };
+        const btnActive = _object_spread_props(_object_spread({}, btnBase), {
+            borderColor: '#fff',
+            background: '#fff',
+            color: '#000'
+        });
+        return /*#__PURE__*/ _jsxs("section", {
+            style: {
+                backgroundColor: '#111',
+                padding: '48px 40px'
+            },
+            children: [
+                /*#__PURE__*/ _jsx("div", {
+                    style: {
+                        maxWidth: '1200px',
+                        margin: '0 auto'
+                    },
+                    children: /*#__PURE__*/ _jsxs("div", {
+                        style: {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            marginBottom: '24px'
+                        },
+                        children: [
+                            sectionTitle && /*#__PURE__*/ _jsx("p", {
+                                style: {
+                                    color: '#666',
+                                    fontSize: '11px',
+                                    letterSpacing: '4px',
+                                    textTransform: 'uppercase',
+                                    fontFamily: 'monospace',
+                                    margin: 0
+                                },
+                                children: sectionTitle
+                            }),
+                            /*#__PURE__*/ _jsxs("div", {
+                                style: {
+                                    display: 'flex',
+                                    gap: '8px',
+                                    marginLeft: 'auto'
+                                },
+                                children: [
+                                    /*#__PURE__*/ _jsx("button", {
+                                        style: view === 'list' ? btnActive : btnBase,
+                                        onClick: ()=>setView('list'),
+                                        children: "☰ List"
+                                    }),
+                                    /*#__PURE__*/ _jsx("button", {
+                                        style: view === 'grid' ? btnActive : btnBase,
+                                        onClick: ()=>setView('grid'),
+                                        children: "⊞ Grid"
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ _jsx("div", {
+                    children: slots === null || slots === void 0 ? void 0 : slots.items
+                })
+            ]
+        });
+    };
+    export default TeaserList;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

@@ -1,0 +1,88 @@
+uuid: 027e1af3-2221-440b-8447-a0476f3c129e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.carousel_hero
+    - paragraphs.paragraphs_type.feature_spot
+    - paragraphs.paragraphs_type.hero_section
+    - paragraphs.paragraphs_type.mosaic_photos
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_components
+field_name: field_components
+entity_type: node
+bundle: landing_page
+label: Components
+description: 'Add modular content components'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rich_text: rich_text
+      hero_section: hero_section
+      carousel_hero: carousel_hero
+      feature_spot: feature_spot
+      mosaic_photos: mosaic_photos
+      view_embed: view_embed
+      nasa_fireball_chart: nasa_fireball_chart
+    negate: 0
+    target_bundles_drag_drop:
+      apod:
+        weight: 17
+        enabled: false
+      carousel:
+        weight: 5
+        enabled: false
+      carousel_hero:
+        weight: 6
+        enabled: true
+      descriptive_content:
+        weight: 20
+        enabled: false
+      earthquake_dashboard:
+        weight: 21
+        enabled: false
+      feature_spot:
+        weight: 10
+        enabled: true
+      hero_section:
+        weight: 3
+        enabled: true
+      iss_tracker:
+        weight: 24
+        enabled: false
+      mosaic_photos:
+        weight: 11
+        enabled: true
+      mosaic_photos_card:
+        weight: 12
+        enabled: false
+      nasa_fireball_chart:
+        weight: 20
+        enabled: true
+      nasa_videos:
+        weight: 28
+        enabled: false
+      pdf_editor:
+        weight: 29
+        enabled: false
+      rich_text:
+        weight: 1
+        enabled: true
+      space_calendar:
+        weight: 31
+        enabled: false
+      view_embed:
+        weight: 15
+        enabled: true
+field_type: entity_reference_revisions

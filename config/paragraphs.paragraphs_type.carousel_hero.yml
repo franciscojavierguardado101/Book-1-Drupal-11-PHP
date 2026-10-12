@@ -1,0 +1,10 @@
+uuid: bef12f99-b798-46c1-95e1-4766c1c0efd6
+langcode: en
+status: true
+dependencies: {  }
+id: carousel_hero
+label: 'Carousel Hero'
+icon_uuid: null
+icon_default: null
+description: "This is the parent of Carousel Card:\r\nhttps://francisco-guardado-book-1.ddev.site:33300/admin/structure/paragraphs_type/carousel/fields"
+behavior_plugins: {  }

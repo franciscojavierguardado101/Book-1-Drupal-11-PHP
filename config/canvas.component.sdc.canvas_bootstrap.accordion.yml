@@ -1,0 +1,87 @@
+uuid: 1e5050c0-124e-4632-be67-84fc96e8203e
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+    - options
+active_version: cf4d0fdab948e58d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Section title'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading_level:
+          required: false
+          field_type: list_float
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '3'
+          expression: ℹ︎list_float␟value
+          derived_schema_metadata: {  }
+        item_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        accordion_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        open_by_default:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        accordion_body:
+          title: 'Accordion body'
+          description: 'Content shown when expanded'
+label: 'Accordion item'
+id: sdc.canvas_bootstrap.accordion
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:accordion'

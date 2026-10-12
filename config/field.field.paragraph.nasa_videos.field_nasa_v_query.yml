@@ -1,0 +1,23 @@
+uuid: f409111d-78e3-451a-bf40-6b8ad09d8edc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nasa_v_query
+    - paragraphs.paragraphs_type.nasa_videos
+_core:
+  default_config_hash: 0kmGxPDcVqTfZhyrskJUjvlnkH0tBoZBZnEg5ZmtC14
+id: paragraph.nasa_videos.field_nasa_v_query
+field_name: field_nasa_v_query
+entity_type: paragraph
+bundle: nasa_videos
+label: 'Default search query'
+description: 'The search term used when the video library first loads (e.g. Space, Mars, Webb).'
+required: false
+translatable: true
+default_value:
+  -
+    value: Space
+default_value_callback: ''
+settings: {  }
+field_type: string

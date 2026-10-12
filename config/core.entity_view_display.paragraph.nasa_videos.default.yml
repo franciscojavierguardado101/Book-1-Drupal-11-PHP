@@ -1,0 +1,30 @@
+uuid: f2efd311-39f5-4fed-9d13-5c6d77e75b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nasa_videos.field_nasa_v_label
+    - field.field.paragraph.nasa_videos.field_nasa_v_query
+    - paragraphs.paragraphs_type.nasa_videos
+_core:
+  default_config_hash: ktAzlLaYfdBbBpjcBD3rzJVN7v7Opb0mepmpsEtwBjg
+id: paragraph.nasa_videos.default
+targetEntityType: paragraph
+bundle: nasa_videos
+mode: default
+content:
+  field_nasa_v_label:
+    type: string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nasa_v_query:
+    type: string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

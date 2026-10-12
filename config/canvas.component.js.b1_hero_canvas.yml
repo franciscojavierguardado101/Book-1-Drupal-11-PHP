@@ -1,0 +1,66 @@
+uuid: b990b358-06cb-469b-a99a-21d112e53e27
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.b1_hero_canvas
+active_version: 0eaeda7051339f82
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Book 1'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        subheading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A story about distance and memory.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        ctaLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Read the Articles'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        ctaUrl:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /articles
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: b1_hero_canvas
+id: js.b1_hero_canvas
+provider: null
+source: js
+source_local_id: b1_hero_canvas

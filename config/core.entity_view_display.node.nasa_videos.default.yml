@@ -1,0 +1,30 @@
+uuid: ab4cdce6-8a77-45bb-b398-add14f04a8df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nasa_videos.field_components
+    - node.type.nasa_videos
+  module:
+    - entity_reference_revisions
+    - user
+id: node.nasa_videos.default
+targetEntityType: node
+bundle: nasa_videos
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

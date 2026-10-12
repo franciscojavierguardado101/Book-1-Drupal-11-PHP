@@ -1,0 +1,40 @@
+uuid: ded1e5aa-3986-4a6d-b006-de1bd845090e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nasa_fireball_chart.field_chart_label
+    - field.field.paragraph.nasa_fireball_chart.field_chart_limit
+    - field.field.paragraph.nasa_fireball_chart.field_chart_type
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+_core:
+  default_config_hash: ocEt1ahxaTpOb_S2IahoU6sUFAbaFPY6AKUa4OLMtl4
+id: paragraph.nasa_fireball_chart.default
+targetEntityType: paragraph
+bundle: nasa_fireball_chart
+mode: default
+content:
+  field_chart_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. NASA Fireball Events'
+    third_party_settings: {  }
+  field_chart_limit:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: '25'
+    third_party_settings: {  }
+  field_chart_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

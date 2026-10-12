@@ -1,0 +1,138 @@
+uuid: 5a0dd552-11a7-4289-84eb-b3f687a112f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+    - options
+active_version: d90e3c23204c4a0a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        carousel_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: carousel-hero
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        show_controls:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        show_indicators:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        slide_count:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 3
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        crossfade:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        dark_theme:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        ride:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        touch:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        wrap:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        keyboard:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        pause:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        slides:
+          title: Slides
+          description: 'The carousel slide items. Each slide should be a .carousel-item element. The first slide must include the active class.'
+label: Carousel
+id: sdc.canvas_bootstrap.carousel
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:carousel'

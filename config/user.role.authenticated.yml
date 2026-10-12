@@ -1,0 +1,22 @@
+uuid: 4d13cfa5-665c-4db8-9a5b-0c1d00b70f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - file
+    - filter
+    - media
+    - system
+_core:
+  default_config_hash: wkW7P5A53YhGmsgamrmTbfwpZrqdnPYiJdoAZQtdmJg
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'delete own files'
+  - 'use text format basic_html'
+  - 'view media'

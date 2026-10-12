@@ -1,0 +1,43 @@
+uuid: a9ddca49-28b1-42eb-ae19-cd113bfb6667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nasa_fireball_chart.field_chart_label
+    - field.field.paragraph.nasa_fireball_chart.field_chart_limit
+    - field.field.paragraph.nasa_fireball_chart.field_chart_type
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+  module:
+    - options
+_core:
+  default_config_hash: zKqRItMQJDYoPP36Cgrzvs4Dv5mijHooTCTkJbIAW3c
+id: paragraph.nasa_fireball_chart.default
+targetEntityType: paragraph
+bundle: nasa_fireball_chart
+mode: default
+content:
+  field_chart_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_chart_limit:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_chart_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

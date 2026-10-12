@@ -1,0 +1,27 @@
+uuid: 4c6632e8-4193-4f71-8018-2dd3e7309061
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_article_bg_color
+field_name: field_article_bg_color
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: article_black
+      label: Black
+    -
+      value: article_white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,71 @@
+uuid: ae73f021-54b9-4d11-b400-f99f18364dc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.book1_articles_grid
+active_version: 7590bd254914dc6a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        sectionHeading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Latest Articles'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        numberOfArticles:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '6'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  f161dfaa1b31e7c6:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Latest Articles'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        limit:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '6'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Book 1 Articles Grid'
+id: js.book1_articles_grid
+provider: null
+source: js
+source_local_id: book1_articles_grid

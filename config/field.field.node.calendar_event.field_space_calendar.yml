@@ -1,0 +1,33 @@
+uuid: a18e0279-d09f-49e7-bea3-f94e8e661f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_space_calendar
+    - node.type.calendar_event
+    - paragraphs.paragraphs_type.space_calendar
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: PEvMgwPj5jPpquGme05NYQYVHvfOKf5VCWrVnkJEn6I
+id: node.calendar_event.field_space_calendar
+field_name: field_space_calendar
+entity_type: node
+bundle: calendar_event
+label: 'Space Calendar'
+description: 'Attach a Space Calendar widget to this node. The widget will render wherever this node appears on the frontend.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      space_calendar: space_calendar
+    negate: 0
+    target_bundles_drag_drop:
+      space_calendar:
+        weight: 1
+        enabled: true
+field_type: entity_reference_revisions

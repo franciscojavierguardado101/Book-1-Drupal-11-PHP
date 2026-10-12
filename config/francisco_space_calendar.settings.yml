@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: Jrpgtm--TXWY2IwFnqwoHdR2BaMzolAq_r6C3xQAcAs
+api_base_url: 'https://ccmc.gsfc.nasa.gov/DONKI-API/get/'
+api_key: ''
+cache_max_age: 3600

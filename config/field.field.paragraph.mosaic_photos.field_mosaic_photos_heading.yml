@@ -1,0 +1,19 @@
+uuid: a7aa6350-d01b-4801-aa83-a46fc59bb9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mosaic_photos_heading
+    - paragraphs.paragraphs_type.mosaic_photos
+id: paragraph.mosaic_photos.field_mosaic_photos_heading
+field_name: field_mosaic_photos_heading
+entity_type: paragraph
+bundle: mosaic_photos
+label: Heading
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

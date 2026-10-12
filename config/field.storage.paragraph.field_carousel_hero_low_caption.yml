@@ -1,0 +1,21 @@
+uuid: 34735a78-d2a9-463e-8bf4-a7df7b89f800
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_carousel_hero_low_caption
+field_name: field_carousel_hero_low_caption
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

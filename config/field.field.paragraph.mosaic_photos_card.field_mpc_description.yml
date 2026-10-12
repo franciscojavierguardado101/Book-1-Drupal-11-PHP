@@ -1,0 +1,19 @@
+uuid: 5b78c19b-b13f-4b6d-8fb6-e77643358947
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mpc_description
+    - paragraphs.paragraphs_type.mosaic_photos_card
+id: paragraph.mosaic_photos_card.field_mpc_description
+field_name: field_mpc_description
+entity_type: paragraph
+bundle: mosaic_photos_card
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

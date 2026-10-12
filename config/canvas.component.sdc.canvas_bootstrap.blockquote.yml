@@ -1,0 +1,121 @@
+uuid: 00e41deb-812b-4cbf-834b-98c603cf0bfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+    - options
+active_version: fc57a9ae7c5caad1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: 'A well-known quote, contained in a blockquote element.'
+          expression: ℹ︎string_long␟value
+          derived_schema_metadata:
+            string_shape:
+              pattern: '(.|\r?\n)*'
+        footer:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        cite:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        alignment:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        italic:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        opacity:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        text_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        blockquote_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        footer_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Blockquote
+id: sdc.canvas_bootstrap.blockquote
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:blockquote'

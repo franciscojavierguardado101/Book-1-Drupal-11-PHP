@@ -1,0 +1,148 @@
+uuid: 9c21934b-ab69-43f5-ba8a-60405aa893b4
+langcode: en
+status: true
+dependencies: {  }
+machineName: moonbound_hero
+name: moonbound_hero
+required: {  }
+props:
+  bgImage:
+    type: object
+    $ref: 'json-schema-definitions://canvas.module/image'
+    title: bg_image
+    examples:
+      -
+        src: 'https://placehold.co/1280x720@2x.png?alternateWidths=https%3A%2F%2Fplacehold.co%2F%7Bwidth%7Dx%7Bheight%7D%402x.png'
+        alt: 'Example image placeholder'
+        width: 1280
+        height: 720
+  logoImage:
+    type: object
+    $ref: 'json-schema-definitions://canvas.module/image'
+    title: logo_image
+  eyebrow:
+    type: string
+    title: eyebrow
+  description:
+    type: string
+    title: description
+  ctaLabel:
+    type: string
+    title: cta_label
+  ctaUrl:
+    type: string
+    title: cta_url
+slots: {  }
+js:
+  original: |-
+    const MoonboundHero = ({ bgImage, logoImage, eyebrow, description, ctaLabel, ctaUrl }) => (
+      <section style={{
+        backgroundImage: bgImage?.src ? `url(${bgImage.src})` : 'none',
+        backgroundColor: '#111', backgroundSize: 'cover',
+        backgroundPosition: 'center right', minHeight: '520px',
+        display: 'flex', alignItems: 'center', padding: '60px 48px', position: 'relative'
+      }}>
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: 'linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.3) 65%, transparent 100%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '520px' }}>
+          {logoImage?.src && <img src={logoImage.src} alt={logoImage.alt || ''}
+            style={{ display: 'block', maxWidth: '300px', width: '100%', marginBottom: '12px' }} />}
+          {eyebrow && <p style={{ color: '#aaa', fontSize: '12px', letterSpacing: '5px',
+            textTransform: 'uppercase', marginBottom: '20px', fontFamily: 'monospace' }}>{eyebrow}</p>}
+          {description && <p style={{ color: '#e8e8e8', fontSize: '16px', lineHeight: '1.75',
+            marginBottom: '36px', maxWidth: '460px' }}>{description}</p>}
+          {ctaLabel && <a href={ctaUrl || '#'} style={{ display: 'inline-block',
+            background: '#fc3d21', color: '#fff', fontWeight: '700', fontSize: '13px',
+            letterSpacing: '2px', textTransform: 'uppercase', padding: '13px 32px',
+            textDecoration: 'none' }}>{ctaLabel}</a>}
+        </div>
+      </section>
+    );
+
+    export default MoonboundHero;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const MoonboundHero = ({ bgImage, logoImage, eyebrow, description, ctaLabel, ctaUrl })=>/*#__PURE__*/ _jsxs("section", {
+            style: {
+                backgroundImage: (bgImage === null || bgImage === void 0 ? void 0 : bgImage.src) ? `url(${bgImage.src})` : 'none',
+                backgroundColor: '#111',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center right',
+                minHeight: '520px',
+                display: 'flex',
+                alignItems: 'center',
+                padding: '60px 48px',
+                position: 'relative'
+            },
+            children: [
+                /*#__PURE__*/ _jsx("div", {
+                    style: {
+                        position: 'absolute',
+                        inset: 0,
+                        pointerEvents: 'none',
+                        background: 'linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.3) 65%, transparent 100%)'
+                    }
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    style: {
+                        position: 'relative',
+                        zIndex: 1,
+                        maxWidth: '520px'
+                    },
+                    children: [
+                        (logoImage === null || logoImage === void 0 ? void 0 : logoImage.src) && /*#__PURE__*/ _jsx("img", {
+                            src: logoImage.src,
+                            alt: logoImage.alt || '',
+                            style: {
+                                display: 'block',
+                                maxWidth: '300px',
+                                width: '100%',
+                                marginBottom: '12px'
+                            }
+                        }),
+                        eyebrow && /*#__PURE__*/ _jsx("p", {
+                            style: {
+                                color: '#aaa',
+                                fontSize: '12px',
+                                letterSpacing: '5px',
+                                textTransform: 'uppercase',
+                                marginBottom: '20px',
+                                fontFamily: 'monospace'
+                            },
+                            children: eyebrow
+                        }),
+                        description && /*#__PURE__*/ _jsx("p", {
+                            style: {
+                                color: '#e8e8e8',
+                                fontSize: '16px',
+                                lineHeight: '1.75',
+                                marginBottom: '36px',
+                                maxWidth: '460px'
+                            },
+                            children: description
+                        }),
+                        ctaLabel && /*#__PURE__*/ _jsx("a", {
+                            href: ctaUrl || '#',
+                            style: {
+                                display: 'inline-block',
+                                background: '#fc3d21',
+                                color: '#fff',
+                                fontWeight: '700',
+                                fontSize: '13px',
+                                letterSpacing: '2px',
+                                textTransform: 'uppercase',
+                                padding: '13px 32px',
+                                textDecoration: 'none'
+                            },
+                            children: ctaLabel
+                        })
+                    ]
+                })
+            ]
+        });
+    export default MoonboundHero;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

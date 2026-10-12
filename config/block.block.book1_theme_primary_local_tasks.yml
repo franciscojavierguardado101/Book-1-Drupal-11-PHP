@@ -1,0 +1,22 @@
+uuid: 052a83d9-2631-4c07-902e-2d97e546412f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - book1_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: book1_theme_primary_local_tasks
+theme: book1_theme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

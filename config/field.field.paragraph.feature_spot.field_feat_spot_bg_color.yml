@@ -1,0 +1,21 @@
+uuid: a31293e4-a7d1-4d79-a41d-6556d8e1172c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feat_spot_bg_color
+    - paragraphs.paragraphs_type.feature_spot
+  module:
+    - options
+id: paragraph.feature_spot.field_feat_spot_bg_color
+field_name: field_feat_spot_bg_color
+entity_type: paragraph
+bundle: feature_spot
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

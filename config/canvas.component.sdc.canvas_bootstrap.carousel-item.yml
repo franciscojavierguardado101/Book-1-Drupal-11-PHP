@@ -1,0 +1,75 @@
+uuid: 262d4bf4-cee2-474b-b706-685bfc6326ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+active_version: dcfc453860952f83
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        interval:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 3000
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        caption_heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'First slide label'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        caption_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Some representative placeholder content for this slide.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        slide_content:
+          title: 'Slide content'
+          description: 'The slide content. Typically an image component. The image should use w-100 width so it fills the slide.'
+label: 'Carousel Item'
+id: sdc.canvas_bootstrap.carousel-item
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:carousel-item'

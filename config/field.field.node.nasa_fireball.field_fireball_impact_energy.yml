@@ -1,0 +1,25 @@
+uuid: e1e2aa81-79e0-492b-832a-4723c6616aa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fireball_impact_energy
+    - node.type.nasa_fireball
+_core:
+  default_config_hash: Y0BZxvi7z1iHK8gT8bl0fYVaLZh2bQNqklyu4aK8VXQ
+id: node.nasa_fireball.field_fireball_impact_energy
+field_name: field_fireball_impact_energy
+entity_type: node
+bundle: nasa_fireball
+label: 'Calculated Total Impact Energy (kt)'
+description: 'Estimated total impact energy in kilotons of TNT equivalent, derived from satellite observations.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,20 @@
+uuid: d53c20d1-259b-4f9d-ba7b-9ac8d5de1494
+langcode: en
+status: true
+dependencies:
+  theme:
+    - book1_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: book1_theme_page_title
+theme: book1_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

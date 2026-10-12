@@ -1,0 +1,26 @@
+uuid: 3c36008b-4f53-46e8-9712-9ada78677e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descript_c_descript
+    - filter.format.basic_html
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.descriptive_content
+  module:
+    - text
+id: paragraph.descriptive_content.field_descript_c_descript
+field_name: field_descript_c_descript
+entity_type: paragraph
+bundle: descriptive_content
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

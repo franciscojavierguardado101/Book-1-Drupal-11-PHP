@@ -1,0 +1,203 @@
+uuid: 90e0ff30-5013-4dd1-870e-26b5eaafeba2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book1_canvas
+machineName: book1_quote
+name: 'Book 1 Pull Quote'
+required: {  }
+props:
+  quoteText:
+    type: string
+    contentMediaType: text/html
+    x-formatting-context: block
+    title: 'Quote Text'
+    examples:
+      - 'The stars above remind us that distance is just another word for longing.'
+  attribution:
+    type: string
+    title: Attribution
+    examples:
+      - 'Francisco Guardado, Book 1'
+  chapterLabel:
+    type: string
+    title: 'Chapter Label'
+    examples:
+      - 'Chapter III'
+  themeDarkOrLight:
+    type: string
+    title: 'Theme (dark or light)'
+    examples:
+      - dark
+slots: {  }
+js:
+  original: |-
+    import FormattedText from '@/lib/FormattedText';
+
+    const Book1Quote = ({ quote, attribution, chapter, theme }) => {
+      const isDark = theme !== 'light';
+      const bg = isDark ? '#0a0a0a' : '#f9f8f4';
+      const quoteColor = isDark ? '#e8e8e8' : '#111';
+      const mutedColor = isDark ? '#444' : '#bbb';
+      const accentColor = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
+
+      return (
+        <section style={{
+          background: bg,
+          padding: '100px 40px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          overflow: 'hidden',
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: '-20px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            fontSize: '260px',
+            lineHeight: '1',
+            color: accentColor,
+            fontFamily: 'Georgia, serif',
+            userSelect: 'none',
+            pointerEvents: 'none',
+          }}>
+            &ldquo;
+          </div>
+          <div style={{ maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
+            {chapter && (
+              <p style={{
+                color: mutedColor,
+                fontSize: '11px',
+                letterSpacing: '5px',
+                textTransform: 'uppercase',
+                fontFamily: 'monospace',
+                marginBottom: '40px',
+              }}>
+                {chapter}
+              </p>
+            )}
+            <blockquote style={{
+              color: quoteColor,
+              fontSize: 'clamp(22px, 3.5vw, 38px)',
+              fontStyle: 'italic',
+              fontFamily: 'Georgia, "Times New Roman", serif',
+              lineHeight: '1.65',
+              letterSpacing: '-0.5px',
+              margin: '0 0 40px',
+            }}>
+              {quote ? <FormattedText>{quote}</FormattedText> : ''}
+            </blockquote>
+            {attribution && (
+              <p style={{
+                color: mutedColor,
+                fontSize: '12px',
+                letterSpacing: '4px',
+                textTransform: 'uppercase',
+                fontFamily: 'monospace',
+              }}>
+                &mdash; {attribution}
+              </p>
+            )}
+          </div>
+        </section>
+      );
+    };
+
+    export default Book1Quote;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    import FormattedText from '@/lib/FormattedText';
+    const Book1Quote = ({ quote, attribution, chapter, theme })=>{
+        const isDark = theme !== 'light';
+        const bg = isDark ? '#0a0a0a' : '#f9f8f4';
+        const quoteColor = isDark ? '#e8e8e8' : '#111';
+        const mutedColor = isDark ? '#444' : '#bbb';
+        const accentColor = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
+        return /*#__PURE__*/ _jsxs("section", {
+            style: {
+                background: bg,
+                padding: '100px 40px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+                overflow: 'hidden'
+            },
+            children: [
+                /*#__PURE__*/ _jsx("div", {
+                    style: {
+                        position: 'absolute',
+                        top: '-20px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        fontSize: '260px',
+                        lineHeight: '1',
+                        color: accentColor,
+                        fontFamily: 'Georgia, serif',
+                        userSelect: 'none',
+                        pointerEvents: 'none'
+                    },
+                    children: "“"
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    style: {
+                        maxWidth: '800px',
+                        textAlign: 'center',
+                        position: 'relative'
+                    },
+                    children: [
+                        chapter && /*#__PURE__*/ _jsx("p", {
+                            style: {
+                                color: mutedColor,
+                                fontSize: '11px',
+                                letterSpacing: '5px',
+                                textTransform: 'uppercase',
+                                fontFamily: 'monospace',
+                                marginBottom: '40px'
+                            },
+                            children: chapter
+                        }),
+                        /*#__PURE__*/ _jsx("blockquote", {
+                            style: {
+                                color: quoteColor,
+                                fontSize: 'clamp(22px, 3.5vw, 38px)',
+                                fontStyle: 'italic',
+                                fontFamily: 'Georgia, "Times New Roman", serif',
+                                lineHeight: '1.65',
+                                letterSpacing: '-0.5px',
+                                margin: '0 0 40px'
+                            },
+                            children: quote ? /*#__PURE__*/ _jsx(FormattedText, {
+                                children: quote
+                            }) : ''
+                        }),
+                        attribution && /*#__PURE__*/ _jsxs("p", {
+                            style: {
+                                color: mutedColor,
+                                fontSize: '12px',
+                                letterSpacing: '4px',
+                                textTransform: 'uppercase',
+                                fontFamily: 'monospace'
+                            },
+                            children: [
+                                "— ",
+                                attribution
+                            ]
+                        })
+                    ]
+                })
+            ]
+        });
+    };
+    export default Book1Quote;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

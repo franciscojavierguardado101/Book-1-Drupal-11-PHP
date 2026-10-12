@@ -1,0 +1,39 @@
+uuid: c3c9bb0d-41de-4152-9704-d5f63a3be1a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_carousel_hero_art_pos
+field_name: field_carousel_hero_art_pos
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: carousel_hero_artistic_middle_right
+      label: 'Artistic Middle Right'
+    -
+      value: carousel_hero_artistic_middle_left
+      label: 'Artistic Middle Left'
+    -
+      value: carousel_hero_lower_right
+      label: 'Lower Right'
+    -
+      value: carousel_hero_lower_left
+      label: 'Lower Left'
+    -
+      value: carousel_hero_upper_right
+      label: 'Upper Right'
+    -
+      value: carousel_hero_upper_left
+      label: 'Upper Left'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

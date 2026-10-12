@@ -1,0 +1,23 @@
+uuid: ae4b9641-1a9b-4717-b6c3-21a5b29dab4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lp_cta
+    - paragraphs.paragraphs_type.hero_section
+  module:
+    - link
+id: paragraph.hero_section.field_lp_cta
+field_name: field_lp_cta
+entity_type: paragraph
+bundle: hero_section
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

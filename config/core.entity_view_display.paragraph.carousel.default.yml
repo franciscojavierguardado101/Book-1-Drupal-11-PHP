@@ -1,0 +1,84 @@
+uuid: a57c5c6c-1902-4afb-9117-7a45f72d7334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel.field_carousel_hero_art_pos
+    - field.field.paragraph.carousel.field_carousel_hero_color
+    - field.field.paragraph.carousel.field_carousel_hero_hero_image
+    - field.field.paragraph.carousel.field_carousel_hero_link
+    - field.field.paragraph.carousel.field_carousel_hero_low_caption
+    - field.field.paragraph.carousel.field_carousel_hero_title
+    - field.field.paragraph.carousel.field_carousel_hero_top_caption
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - link
+    - options
+id: paragraph.carousel.default
+targetEntityType: paragraph
+bundle: carousel
+mode: default
+content:
+  field_carousel_hero_art_pos:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_carousel_hero_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_carousel_hero_hero_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_carousel_hero_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_carousel_hero_low_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_carousel_hero_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_carousel_hero_top_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

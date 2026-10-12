@@ -1,0 +1,22 @@
+uuid: 373e7125-ac55-4677-ad04-379737d8c7c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - book1_theme
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: book1_theme_messages
+theme: book1_theme
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

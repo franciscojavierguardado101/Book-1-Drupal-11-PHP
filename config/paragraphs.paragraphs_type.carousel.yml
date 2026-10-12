@@ -1,0 +1,10 @@
+uuid: 73a72660-419d-4721-8858-4ae7cdbbd937
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: 'Carousel Card'
+icon_uuid: null
+icon_default: null
+description: "This is the child of Carousel Hero:\r\nhttps://francisco-guardado-book-1.ddev.site:33300/admin/structure/paragraphs_type/carousel_hero"
+behavior_plugins: {  }

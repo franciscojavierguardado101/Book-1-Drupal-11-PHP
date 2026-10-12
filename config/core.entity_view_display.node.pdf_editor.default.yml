@@ -1,0 +1,30 @@
+uuid: ee9533d5-49c2-4afe-af33-cf94bebd7d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pdf_editor.field_components
+    - node.type.pdf_editor
+  module:
+    - entity_reference_revisions
+    - user
+id: node.pdf_editor.default
+targetEntityType: node
+bundle: pdf_editor
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: 26094352-e121-418a-99f7-82a3d91ae94c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feat_spot_image
+    - media.type.image
+    - paragraphs.paragraphs_type.feature_spot
+id: paragraph.feature_spot.field_feat_spot_image
+field_name: field_feat_spot_image
+entity_type: paragraph
+bundle: feature_spot
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

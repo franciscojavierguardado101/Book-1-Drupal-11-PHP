@@ -1,0 +1,12 @@
+uuid: 87d2ba59-5dae-448c-87dd-4a9749132ed4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bn6zxlJ0B96ZC0c712WFVpc_UoE25aYX4Zrelg2m0bg
+id: iss_tracker
+label: 'ISS Tracker'
+icon_uuid: null
+icon_default: null
+description: 'Displays a live International Space Station tracker with map, position data, and crew information.'
+behavior_plugins: {  }

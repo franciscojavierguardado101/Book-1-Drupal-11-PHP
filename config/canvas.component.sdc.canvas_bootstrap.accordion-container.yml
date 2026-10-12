@@ -1,0 +1,50 @@
+uuid: a82ba967-8507-4c22-b8cd-0016cb399422
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+active_version: 6fa0aa05c9ef8e7d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        accordion_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        flush:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        accordion_content:
+          title: 'Accordion items'
+          description: 'Add accordion item components here'
+label: 'Accordion container'
+id: sdc.canvas_bootstrap.accordion-container
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:accordion-container'

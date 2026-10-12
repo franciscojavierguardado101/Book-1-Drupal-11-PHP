@@ -1,0 +1,239 @@
+uuid: df02a18d-805e-4915-98dd-177d3aeeb9f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.book1_stats_bar
+active_version: e849a93792a578a5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        stat1Value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '4'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat1Label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Articles Published'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat2Value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '12'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat2Label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Chapters Written'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat3Value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2026'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat3Label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Year
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat4Value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '1'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat4Label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Book in Progress'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        themeDarkOrLight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: dark
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  860c935c3368dd03:
+    settings:
+      prop_field_definitions:
+        stat1_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '4'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat1_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Articles Published'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat2_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '12'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat2_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Chapters Written'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat3_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2026'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat3_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Year
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat4_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '1'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        stat4_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Book in Progress'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        theme:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: dark
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Book 1 Stats Bar'
+id: js.book1_stats_bar
+provider: null
+source: js
+source_local_id: book1_stats_bar

@@ -1,0 +1,21 @@
+uuid: dded8e22-e8d7-4c8b-8fc8-268aea88a4df
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_mpc_credit
+field_name: field_mpc_credit
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

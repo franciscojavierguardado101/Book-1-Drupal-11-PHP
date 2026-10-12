@@ -1,0 +1,39 @@
+uuid: 49221f2a-a362-414b-b98a-93ccbe3d7da5
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.js.asa_series_hero
+    - canvas.component.js.b1_hero_canvas
+    - canvas.component.js.book1_articles_grid
+    - canvas.component.js.book1_feature_card
+    - canvas.component.js.book1_hero
+    - canvas.component.js.book1_quote
+    - canvas.component.js.book1_stats_bar
+    - canvas.component.js.moonbound_article
+    - canvas.component.js.moonbound_hero
+    - canvas.component.js.teaser_item
+    - canvas.component.js.teaser_list
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.navigation.message
+    - canvas.component.sdc.navigation.title
+    - canvas.component.sdc.olivero.teaser
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - js.asa_series_hero
+  - js.b1_hero_canvas
+  - js.book1_articles_grid
+  - js.book1_feature_card
+  - js.book1_hero
+  - js.book1_quote
+  - js.book1_stats_bar
+  - js.moonbound_article
+  - js.moonbound_hero
+  - js.teaser_item
+  - js.teaser_list
+  - marker.page_content
+  - sdc.navigation.message
+  - sdc.navigation.title
+  - sdc.olivero.teaser

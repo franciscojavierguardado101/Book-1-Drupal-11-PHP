@@ -1,0 +1,103 @@
+uuid: 9525aed3-d592-4602-a72f-5abe86d72bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nasa_fireball.field_fireball_altitude
+    - field.field.node.nasa_fireball.field_fireball_energy
+    - field.field.node.nasa_fireball.field_fireball_impact_energy
+    - field.field.node.nasa_fireball.field_fireball_latitude
+    - field.field.node.nasa_fireball.field_fireball_longitude
+    - field.field.node.nasa_fireball.field_fireball_velocity
+    - node.type.nasa_fireball
+  module:
+    - path
+_core:
+  default_config_hash: d0ZkV2P-WsS_jMsI0mRAmCOyA6I_IF3HBTMkgngjLR4
+id: node.nasa_fireball.default
+targetEntityType: node
+bundle: nasa_fireball
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fireball_altitude:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fireball_energy:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fireball_impact_energy:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fireball_latitude:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fireball_longitude:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fireball_velocity:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

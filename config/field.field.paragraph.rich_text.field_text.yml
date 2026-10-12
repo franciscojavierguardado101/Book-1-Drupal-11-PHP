@@ -1,0 +1,24 @@
+uuid: 1629ddec-c19f-45d1-a697-f533211102c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.rich_text
+  module:
+    - text
+_core:
+  default_config_hash: 8iR7Yi8oQOqb8u5NyxvCuQGev5Juz7GLyp1InBTVBqM
+id: paragraph.rich_text.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: rich_text
+label: Text
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

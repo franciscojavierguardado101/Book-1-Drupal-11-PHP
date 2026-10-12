@@ -1,0 +1,12 @@
+uuid: 7a481cd2-10a8-4242-b595-ee4cb8405bd8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pQGe_y_97t5IfSrPg0qWU7juELDuDMvI4vQ7PRxn-hU
+id: earthquake_dashboard
+label: 'Earthquake Dashboard'
+icon_uuid: null
+icon_default: null
+description: 'Displays a real-time USGS earthquake dashboard with severity stats and a scrollable event list.'
+behavior_plugins: {  }

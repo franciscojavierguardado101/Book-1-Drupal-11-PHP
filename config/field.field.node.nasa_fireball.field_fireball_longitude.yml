@@ -1,0 +1,25 @@
+uuid: b7007cae-30d3-41ba-b861-fec591e7c613
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fireball_longitude
+    - node.type.nasa_fireball
+_core:
+  default_config_hash: XHM6bSdl2VhD2xxKut086a-CwpyfAoCV54mM4TMLz_o
+id: node.nasa_fireball.field_fireball_longitude
+field_name: field_fireball_longitude
+entity_type: node
+bundle: nasa_fireball
+label: 'Longitude (°)'
+description: 'Geographic longitude of the fireball event. Positive = East, Negative = West.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

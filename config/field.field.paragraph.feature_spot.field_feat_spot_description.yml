@@ -1,0 +1,19 @@
+uuid: d6f64156-04d1-4feb-8937-1112a6e5ebc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feat_spot_description
+    - paragraphs.paragraphs_type.feature_spot
+id: paragraph.feature_spot.field_feat_spot_description
+field_name: field_feat_spot_description
+entity_type: paragraph
+bundle: feature_spot
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

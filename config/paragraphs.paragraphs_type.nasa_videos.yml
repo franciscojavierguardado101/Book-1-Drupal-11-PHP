@@ -1,0 +1,12 @@
+uuid: c6110a96-4bbf-4acb-b797-7a445bbe7dbf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6AWxdlj46ed-LcK11D0bh2TT6eisO9wU0m6BjBNsbmg
+id: nasa_videos
+label: 'NASA Video Library'
+icon_uuid: null
+icon_default: null
+description: 'Displays a searchable feed of NASA science videos with a grid layout and inline video player.'
+behavior_plugins: {  }

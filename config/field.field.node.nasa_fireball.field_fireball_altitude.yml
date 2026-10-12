@@ -1,0 +1,25 @@
+uuid: 04c7a5af-dbcf-4771-b3fc-d6849d96dad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fireball_altitude
+    - node.type.nasa_fireball
+_core:
+  default_config_hash: t9_8ILx0dh0vc__Ox5qGCn_lTYcQUF5AqiPpxfxW4Z8
+id: node.nasa_fireball.field_fireball_altitude
+field_name: field_fireball_altitude
+entity_type: node
+bundle: nasa_fireball
+label: 'Altitude (km)'
+description: 'Altitude of the fireball at peak brightness in kilometers above sea level.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

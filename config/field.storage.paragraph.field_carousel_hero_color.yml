@@ -1,0 +1,33 @@
+uuid: e173bacc-3422-467d-a0ed-5ea1c4a9394f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_carousel_hero_color
+field_name: field_carousel_hero_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: carousel_hero_magenta
+      label: 'Magenta: #c66ec2'
+    -
+      value: carousel_hero_black
+      label: 'Black: #00000'
+    -
+      value: carousel_hero_yellow
+      label: 'Yellow: #e1e72a'
+    -
+      value: carousel_hero_dark_red
+      label: 'Dark Red: #C20000'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

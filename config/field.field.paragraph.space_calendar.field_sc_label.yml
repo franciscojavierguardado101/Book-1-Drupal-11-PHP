@@ -1,0 +1,21 @@
+uuid: 4ba0b325-4f94-49dc-959a-e80dc56fbd46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sc_label
+    - paragraphs.paragraphs_type.space_calendar
+_core:
+  default_config_hash: Kja1tbgkbRE4Ftq2Ecgb8STa5dSmChq7WbUjNhp_UZM
+id: paragraph.space_calendar.field_sc_label
+field_name: field_sc_label
+entity_type: paragraph
+bundle: space_calendar
+label: 'Calendar heading'
+description: 'Optional heading displayed above the calendar widget on the frontend.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

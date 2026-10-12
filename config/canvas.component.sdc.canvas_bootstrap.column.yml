@@ -1,0 +1,94 @@
+uuid: 2604f564-4de5-4b24-a562-bddde06dc41c
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+    - options
+active_version: 171e60b6c774ac5c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        col:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: col
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        col_lg:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        col_md:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        col_sm:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        col_xl:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        col_xxl:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        column:
+          title: Column
+          description: 'Column content'
+label: Column
+id: sdc.canvas_bootstrap.column
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:column'

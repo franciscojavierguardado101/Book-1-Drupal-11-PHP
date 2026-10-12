@@ -1,0 +1,30 @@
+uuid: 445b7b19-31ee-43ae-87b7-43ea12687397
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.teaser_list
+active_version: e0de439e1058bfb9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        sectionTitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: items
+label: teaser_list
+id: js.teaser_list
+provider: null
+source: js
+source_local_id: teaser_list

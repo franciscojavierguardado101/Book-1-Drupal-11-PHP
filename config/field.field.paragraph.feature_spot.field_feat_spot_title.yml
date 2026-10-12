@@ -1,0 +1,19 @@
+uuid: 5a1ccc2e-5c95-4df4-be1c-4c93bed04063
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feat_spot_title
+    - paragraphs.paragraphs_type.feature_spot
+id: paragraph.feature_spot.field_feat_spot_title
+field_name: field_feat_spot_title
+entity_type: paragraph
+bundle: feature_spot
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

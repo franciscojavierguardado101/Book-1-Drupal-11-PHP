@@ -1,0 +1,21 @@
+uuid: 6f6bd5dd-14a7-4958-98aa-2f1044d240d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nasa_v_label
+    - paragraphs.paragraphs_type.nasa_videos
+_core:
+  default_config_hash: eoaQslQG5VWqCJ7Sfc9OYW1GrEC_RAJlK7fVl2LJg8c
+id: paragraph.nasa_videos.field_nasa_v_label
+field_name: field_nasa_v_label
+entity_type: paragraph
+bundle: nasa_videos
+label: 'Section heading'
+description: 'Optional heading displayed above the video library.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

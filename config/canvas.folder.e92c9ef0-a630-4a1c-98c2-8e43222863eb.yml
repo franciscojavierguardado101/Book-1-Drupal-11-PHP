@@ -1,0 +1,41 @@
+uuid: e92c9ef0-a630-4a1c-98c2-8e43222863eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.canvas_bootstrap.accordion
+    - canvas.component.sdc.canvas_bootstrap.accordion-container
+    - canvas.component.sdc.canvas_bootstrap.blockquote
+    - canvas.component.sdc.canvas_bootstrap.button
+    - canvas.component.sdc.canvas_bootstrap.canvas_bootstrap_alert
+    - canvas.component.sdc.canvas_bootstrap.canvas_bootstrap_badge
+    - canvas.component.sdc.canvas_bootstrap.card
+    - canvas.component.sdc.canvas_bootstrap.carousel
+    - canvas.component.sdc.canvas_bootstrap.carousel-item
+    - canvas.component.sdc.canvas_bootstrap.column
+    - canvas.component.sdc.canvas_bootstrap.heading
+    - canvas.component.sdc.canvas_bootstrap.image
+    - canvas.component.sdc.canvas_bootstrap.link
+    - canvas.component.sdc.canvas_bootstrap.paragraph
+    - canvas.component.sdc.canvas_bootstrap.row
+    - canvas.component.sdc.canvas_bootstrap.wrapper
+name: 'Canvas Bootstrap'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.canvas_bootstrap.accordion
+  - sdc.canvas_bootstrap.accordion-container
+  - sdc.canvas_bootstrap.blockquote
+  - sdc.canvas_bootstrap.button
+  - sdc.canvas_bootstrap.canvas_bootstrap_alert
+  - sdc.canvas_bootstrap.canvas_bootstrap_badge
+  - sdc.canvas_bootstrap.card
+  - sdc.canvas_bootstrap.carousel
+  - sdc.canvas_bootstrap.carousel-item
+  - sdc.canvas_bootstrap.column
+  - sdc.canvas_bootstrap.heading
+  - sdc.canvas_bootstrap.image
+  - sdc.canvas_bootstrap.link
+  - sdc.canvas_bootstrap.paragraph
+  - sdc.canvas_bootstrap.row
+  - sdc.canvas_bootstrap.wrapper

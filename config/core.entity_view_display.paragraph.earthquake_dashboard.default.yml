@@ -1,0 +1,32 @@
+uuid: 3ed082be-82b0-4f35-83b3-fa710f096048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.earthquake_dashboard.field_eq_default_range
+    - field.field.paragraph.earthquake_dashboard.field_eq_label
+    - paragraphs.paragraphs_type.earthquake_dashboard
+  module:
+    - options
+_core:
+  default_config_hash: ZmwY3K_Oo7GH8mElgnhsSkbI1S_cDhSYtZjd9reQh3A
+id: paragraph.earthquake_dashboard.default
+targetEntityType: paragraph
+bundle: earthquake_dashboard
+mode: default
+content:
+  field_eq_default_range:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_eq_label:
+    type: string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

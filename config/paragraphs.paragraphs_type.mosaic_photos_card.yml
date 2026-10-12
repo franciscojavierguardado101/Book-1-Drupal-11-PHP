@@ -1,0 +1,10 @@
+uuid: 9ce3ff65-50a0-4b28-ba89-939c05154022
+langcode: en
+status: true
+dependencies: {  }
+id: mosaic_photos_card
+label: 'Mosaic Photos Card'
+icon_uuid: null
+icon_default: null
+description: "It's the child of Mosaic Photos."
+behavior_plugins: {  }

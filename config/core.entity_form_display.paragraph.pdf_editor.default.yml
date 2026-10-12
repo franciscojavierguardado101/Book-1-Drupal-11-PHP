@@ -1,0 +1,25 @@
+uuid: f329900b-4b2f-4ff2-a65c-f5298340f58f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pdf_editor.field_pdf_label
+    - paragraphs.paragraphs_type.pdf_editor
+_core:
+  default_config_hash: vvafJ-Df59vrcpiRc4WJ2VMMyE6DzOlZY1mwxHWTCpA
+id: paragraph.pdf_editor.default
+targetEntityType: paragraph
+bundle: pdf_editor
+mode: default
+content:
+  field_pdf_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. PDF Editor'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: ef124347-4a22-496a-b708-47ea3b52ae66
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_lp_caption
+field_name: field_lp_caption
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

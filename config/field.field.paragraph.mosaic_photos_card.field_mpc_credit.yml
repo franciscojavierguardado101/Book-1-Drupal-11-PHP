@@ -1,0 +1,19 @@
+uuid: 927ed055-d797-4f08-b33b-7b5bd3bbc145
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mpc_credit
+    - paragraphs.paragraphs_type.mosaic_photos_card
+id: paragraph.mosaic_photos_card.field_mpc_credit
+field_name: field_mpc_credit
+entity_type: paragraph
+bundle: mosaic_photos_card
+label: Credit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

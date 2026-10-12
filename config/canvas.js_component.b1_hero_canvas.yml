@@ -1,0 +1,148 @@
+uuid: 70cf042f-98a1-40ce-bce1-50d6d4498bb2
+langcode: en
+status: true
+dependencies: {  }
+machineName: b1_hero_canvas
+name: b1_hero_canvas
+required: {  }
+props:
+  heading:
+    type: string
+    title: heading
+    examples:
+      - 'Book 1'
+  subheading:
+    type: string
+    title: subheading
+    examples:
+      - 'A story about distance and memory.'
+  ctaLabel:
+    type: string
+    title: cta_label
+    examples:
+      - 'Read the Articles'
+  ctaUrl:
+    type: string
+    title: cta_url
+    examples:
+      - /articles
+slots: {  }
+js:
+  original: |-
+    const B1HeroCanvas = ({ heading, subheading, cta_label, cta_url }) => (
+      <section style={{
+        background: '#0f0f0f',
+        minHeight: '80vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        padding: '80px 40px',
+      }}>
+        <p style={{
+          color: '#555', fontSize: '11px', letterSpacing: '6px',
+          textTransform: 'uppercase', marginBottom: '24px',
+          fontFamily: 'monospace',
+        }}>
+          Francisco Guardado
+        </p>
+        <h1 style={{
+          color: '#fff', fontSize: 'clamp(48px, 8vw, 96px)',
+          fontWeight: '400', lineHeight: '1.05', letterSpacing: '-2px',
+          maxWidth: '900px', marginBottom: '32px', fontFamily: 'monospace',
+        }}>
+          {heading || 'Book 1'}
+        </h1>
+        {subheading && (
+          <p style={{
+            color: '#888', fontSize: 'clamp(16px, 2vw, 22px)',
+            maxWidth: '600px', lineHeight: '1.7', marginBottom: '48px',
+          }}>
+            {subheading}
+          </p>
+        )}
+        {cta_label && (
+          <a href={cta_url || '#'} style={{
+            display: 'inline-block', padding: '14px 36px',
+            border: '1px solid rgba(255,255,255,0.2)',
+            color: '#fff', textDecoration: 'none',
+            fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase',
+          }}>
+            {cta_label}
+          </a>
+        )}
+      </section>
+    );
+
+    export default B1HeroCanvas;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const B1HeroCanvas = ({ heading, subheading, cta_label, cta_url })=>/*#__PURE__*/ _jsxs("section", {
+            style: {
+                background: '#0f0f0f',
+                minHeight: '80vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                padding: '80px 40px'
+            },
+            children: [
+                /*#__PURE__*/ _jsx("p", {
+                    style: {
+                        color: '#555',
+                        fontSize: '11px',
+                        letterSpacing: '6px',
+                        textTransform: 'uppercase',
+                        marginBottom: '24px',
+                        fontFamily: 'monospace'
+                    },
+                    children: "Francisco Guardado"
+                }),
+                /*#__PURE__*/ _jsx("h1", {
+                    style: {
+                        color: '#fff',
+                        fontSize: 'clamp(48px, 8vw, 96px)',
+                        fontWeight: '400',
+                        lineHeight: '1.05',
+                        letterSpacing: '-2px',
+                        maxWidth: '900px',
+                        marginBottom: '32px',
+                        fontFamily: 'monospace'
+                    },
+                    children: heading || 'Book 1'
+                }),
+                subheading && /*#__PURE__*/ _jsx("p", {
+                    style: {
+                        color: '#888',
+                        fontSize: 'clamp(16px, 2vw, 22px)',
+                        maxWidth: '600px',
+                        lineHeight: '1.7',
+                        marginBottom: '48px'
+                    },
+                    children: subheading
+                }),
+                cta_label && /*#__PURE__*/ _jsx("a", {
+                    href: cta_url || '#',
+                    style: {
+                        display: 'inline-block',
+                        padding: '14px 36px',
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontSize: '11px',
+                        letterSpacing: '4px',
+                        textTransform: 'uppercase'
+                    },
+                    children: cta_label
+                })
+            ]
+        });
+    export default B1HeroCanvas;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

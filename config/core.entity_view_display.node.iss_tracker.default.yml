@@ -1,0 +1,30 @@
+uuid: 5f548f85-c076-428a-b93d-89b7e1f38305
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.iss_tracker.field_components
+    - node.type.iss_tracker
+  module:
+    - entity_reference_revisions
+    - user
+id: node.iss_tracker.default
+targetEntityType: node
+bundle: iss_tracker
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

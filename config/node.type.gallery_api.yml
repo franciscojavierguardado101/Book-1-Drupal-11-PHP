@@ -1,0 +1,18 @@
+uuid: 79d2b557-5e12-45e6-bffa-073b61a9c95c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Gallery API'
+type: gallery_api
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

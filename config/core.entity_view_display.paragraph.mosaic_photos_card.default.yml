@@ -1,0 +1,60 @@
+uuid: 5272e852-ab24-4584-873b-d16dd890d492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mosaic_photos_card.field_mpc_caption
+    - field.field.paragraph.mosaic_photos_card.field_mpc_credit
+    - field.field.paragraph.mosaic_photos_card.field_mpc_description
+    - field.field.paragraph.mosaic_photos_card.field_mpc_media
+    - field.field.paragraph.mosaic_photos_card.field_mpc_title
+    - paragraphs.paragraphs_type.mosaic_photos_card
+id: paragraph.mosaic_photos_card.default
+targetEntityType: paragraph
+bundle: mosaic_photos_card
+mode: default
+content:
+  field_mpc_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_mpc_credit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_mpc_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_mpc_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_mpc_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

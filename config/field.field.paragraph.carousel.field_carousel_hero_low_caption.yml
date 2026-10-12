@@ -1,0 +1,19 @@
+uuid: 5ef98e43-935a-4988-ad83-8c6dbe79fa9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel_hero_low_caption
+    - paragraphs.paragraphs_type.carousel
+id: paragraph.carousel.field_carousel_hero_low_caption
+field_name: field_carousel_hero_low_caption
+entity_type: paragraph
+bundle: carousel
+label: 'Lower Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

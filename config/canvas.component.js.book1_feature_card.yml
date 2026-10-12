@@ -1,0 +1,190 @@
+uuid: ff352997-7216-4ec5-b273-0a3198bda4ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.js_component.book1_feature_card
+    - filter.format.canvas_html_block
+  module:
+    - text
+active_version: 1d89467e21ce7c18
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'About the Book'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: block
+        bodyText:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'A gripping debut novel that...'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: block
+        eyebrowLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Chapter One'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        linkLabel:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Learn More'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        linkUrl:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /articles
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        themeDarkOrLight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: dark
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  eeec8f5ca30e9edc:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'About the Book'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: block
+        body:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'A gripping debut novel that...'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: block
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Chapter One'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Learn More'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /articles
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        theme:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: dark
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Book 1 Feature Card'
+id: js.book1_feature_card
+provider: null
+source: js
+source_local_id: book1_feature_card

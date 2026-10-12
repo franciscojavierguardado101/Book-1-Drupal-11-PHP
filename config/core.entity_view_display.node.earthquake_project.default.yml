@@ -1,0 +1,30 @@
+uuid: 59d513bc-0d4b-49ce-82ee-24b121c7a19e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.earthquake_project.field_components
+    - node.type.earthquake_project
+  module:
+    - entity_reference_revisions
+    - user
+id: node.earthquake_project.default
+targetEntityType: node
+bundle: earthquake_project
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

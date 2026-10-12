@@ -1,0 +1,22 @@
+uuid: 5afd8a80-9418-4e8a-9bc1-cff242a2b3f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - book1_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: book1_theme_content
+theme: book1_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

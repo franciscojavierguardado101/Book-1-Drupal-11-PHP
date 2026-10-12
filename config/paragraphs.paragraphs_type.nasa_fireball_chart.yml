@@ -1,0 +1,12 @@
+uuid: db5063ba-6d7c-42e1-921b-66f329bc00cf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nuNOKIREewsoC3c2oFCcbgmeo6HIjXIt0S71b0ouryg
+id: nasa_fireball_chart
+label: 'NASA Fireball Chart'
+icon_uuid: null
+icon_default: null
+description: 'Interactive chart component visualising NASA fireball event data. Choose bar, line, or scatter and the number of records to display.'
+behavior_plugins: {  }

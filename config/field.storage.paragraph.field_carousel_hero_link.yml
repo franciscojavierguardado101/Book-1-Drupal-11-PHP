@@ -1,0 +1,19 @@
+uuid: 8f531d7e-b4e8-497c-8085-f30c70be9ff6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_carousel_hero_link
+field_name: field_carousel_hero_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

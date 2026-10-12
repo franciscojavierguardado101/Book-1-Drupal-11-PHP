@@ -1,0 +1,30 @@
+uuid: 027492df-c1cf-4016-a807-4edb3d243135
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gallery_api.field_components
+    - node.type.gallery_api
+  module:
+    - entity_reference_revisions
+    - user
+id: node.gallery_api.default
+targetEntityType: node
+bundle: gallery_api
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

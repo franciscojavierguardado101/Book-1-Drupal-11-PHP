@@ -1,0 +1,27 @@
+uuid: 21f39352-2558-41e8-8bda-ebc519cdc900
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_feat_spot_bg_color
+field_name: field_feat_spot_bg_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: feat_spot_black
+      label: Black
+    -
+      value: feat_spot_white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 7f7d0c23-d051-46e6-90e9-59011cc5214a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.apod.field_apod_label
+    - paragraphs.paragraphs_type.apod
+_core:
+  default_config_hash: CKZcJmb0gdDCQpMb0XGS_N0Gw8-cGSnsI7ETmb-VPNc
+id: paragraph.apod.default
+targetEntityType: paragraph
+bundle: apod
+mode: default
+content:
+  field_apod_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. Astronomy Picture of the Day'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

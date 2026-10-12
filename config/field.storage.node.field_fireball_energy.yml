@@ -1,0 +1,22 @@
+uuid: b32a0b71-440e-4e57-b4f8-efb2b42ad56c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lbUuHBgK0JsQlw6-QfQDPjNnSG6j2z4EmcwF4Dkus3g
+id: node.field_fireball_energy
+field_name: field_fireball_energy
+entity_type: node
+type: decimal
+settings:
+  precision: 18
+  scale: 4
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

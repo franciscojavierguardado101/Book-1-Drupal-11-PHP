@@ -1,0 +1,207 @@
+uuid: b705ca19-9eeb-4365-b918-84d29b9bf7b2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book1_canvas
+machineName: book1_stats_bar
+name: 'Book 1 Stats Bar'
+required: {  }
+props:
+  stat1Value:
+    type: string
+    title: 'Stat 1 Value'
+    examples:
+      - '4'
+  stat1Label:
+    type: string
+    title: 'Stat 1 Label'
+    examples:
+      - 'Articles Published'
+  stat2Value:
+    type: string
+    title: 'Stat 2 Value'
+    examples:
+      - '12'
+  stat2Label:
+    type: string
+    title: 'Stat 2 Label'
+    examples:
+      - 'Chapters Written'
+  stat3Value:
+    type: string
+    title: 'Stat 3 Value'
+    examples:
+      - '2026'
+  stat3Label:
+    type: string
+    title: 'Stat 3 Label'
+    examples:
+      - Year
+  stat4Value:
+    type: string
+    title: 'Stat 4 Value'
+    examples:
+      - '1'
+  stat4Label:
+    type: string
+    title: 'Stat 4 Label'
+    examples:
+      - 'Book in Progress'
+  themeDarkOrLight:
+    type: string
+    title: 'Theme (dark or light)'
+    examples:
+      - dark
+slots: {  }
+js:
+  original: |-
+    const Book1StatsBar = ({
+      stat1_value, stat1_label,
+      stat2_value, stat2_label,
+      stat3_value, stat3_label,
+      stat4_value, stat4_label,
+      theme,
+    }) => {
+      const isDark = theme !== 'light';
+      const bg = isDark ? '#0f0f0f' : '#f5f4f0';
+      const valueColor = isDark ? '#ffffff' : '#111';
+      const labelColor = isDark ? '#444' : '#aaa';
+      const borderColor = isDark ? '#1a1a1a' : '#e5e5e5';
+
+      const stats = [
+        { value: stat1_value, label: stat1_label },
+        { value: stat2_value, label: stat2_label },
+        { value: stat3_value, label: stat3_label },
+        { value: stat4_value, label: stat4_label },
+      ].filter(s => s.value);
+
+      if (!stats.length) return null;
+
+      return (
+        <section style={{
+          background: bg,
+          borderTop: `1px solid ${borderColor}`,
+          borderBottom: `1px solid ${borderColor}`,
+          padding: '60px 40px',
+        }}>
+          <div style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
+          }}>
+            {stats.map((stat, i) => (
+              <div key={i} style={{
+                padding: '40px',
+                textAlign: 'center',
+                borderRight: i < stats.length - 1 ? `1px solid ${borderColor}` : 'none',
+              }}>
+                <div style={{
+                  color: valueColor,
+                  fontSize: 'clamp(40px, 6vw, 72px)',
+                  fontWeight: '300',
+                  letterSpacing: '-3px',
+                  lineHeight: '1',
+                  marginBottom: '16px',
+                }}>
+                  {stat.value}
+                </div>
+                <div style={{
+                  color: labelColor,
+                  fontSize: '11px',
+                  letterSpacing: '4px',
+                  textTransform: 'uppercase',
+                  fontFamily: 'monospace',
+                }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    };
+
+    export default Book1StatsBar;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const Book1StatsBar = ({ stat1_value, stat1_label, stat2_value, stat2_label, stat3_value, stat3_label, stat4_value, stat4_label, theme })=>{
+        const isDark = theme !== 'light';
+        const bg = isDark ? '#0f0f0f' : '#f5f4f0';
+        const valueColor = isDark ? '#ffffff' : '#111';
+        const labelColor = isDark ? '#444' : '#aaa';
+        const borderColor = isDark ? '#1a1a1a' : '#e5e5e5';
+        const stats = [
+            {
+                value: stat1_value,
+                label: stat1_label
+            },
+            {
+                value: stat2_value,
+                label: stat2_label
+            },
+            {
+                value: stat3_value,
+                label: stat3_label
+            },
+            {
+                value: stat4_value,
+                label: stat4_label
+            }
+        ].filter((s)=>s.value);
+        if (!stats.length) return null;
+        return /*#__PURE__*/ _jsx("section", {
+            style: {
+                background: bg,
+                borderTop: `1px solid ${borderColor}`,
+                borderBottom: `1px solid ${borderColor}`,
+                padding: '60px 40px'
+            },
+            children: /*#__PURE__*/ _jsx("div", {
+                style: {
+                    maxWidth: '1200px',
+                    margin: '0 auto',
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${stats.length}, 1fr)`
+                },
+                children: stats.map((stat, i)=>/*#__PURE__*/ _jsxs("div", {
+                        style: {
+                            padding: '40px',
+                            textAlign: 'center',
+                            borderRight: i < stats.length - 1 ? `1px solid ${borderColor}` : 'none'
+                        },
+                        children: [
+                            /*#__PURE__*/ _jsx("div", {
+                                style: {
+                                    color: valueColor,
+                                    fontSize: 'clamp(40px, 6vw, 72px)',
+                                    fontWeight: '300',
+                                    letterSpacing: '-3px',
+                                    lineHeight: '1',
+                                    marginBottom: '16px'
+                                },
+                                children: stat.value
+                            }),
+                            /*#__PURE__*/ _jsx("div", {
+                                style: {
+                                    color: labelColor,
+                                    fontSize: '11px',
+                                    letterSpacing: '4px',
+                                    textTransform: 'uppercase',
+                                    fontFamily: 'monospace'
+                                },
+                                children: stat.label
+                            })
+                        ]
+                    }, i))
+            })
+        });
+    };
+    export default Book1StatsBar;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

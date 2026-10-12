@@ -1,0 +1,32 @@
+uuid: 6885e550-b3c8-4532-a3fb-1714f50a9529
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calendar_event.field_components
+    - field.field.node.calendar_event.field_space_calendar
+    - node.type.calendar_event
+  module:
+    - entity_reference_revisions
+    - user
+id: node.calendar_event.default
+targetEntityType: node
+bundle: calendar_event
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_space_calendar: true

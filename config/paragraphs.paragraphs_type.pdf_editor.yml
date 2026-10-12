@@ -1,0 +1,12 @@
+uuid: ae498c0f-f6ef-4aa8-b1c5-86f448df135a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: baQJLUtL5crBv9gdybt_AlAM8-2Vd3VNzvywmNkTjU0
+id: pdf_editor
+label: 'PDF Editor'
+icon_uuid: null
+icon_default: ''
+description: 'Drag-and-drop PDF field editor with download.'
+behavior_plugins: {  }

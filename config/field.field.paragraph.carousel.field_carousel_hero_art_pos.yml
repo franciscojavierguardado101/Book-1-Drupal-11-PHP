@@ -1,0 +1,21 @@
+uuid: 5bc35d81-a8a1-4348-8451-f637dc351a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel_hero_art_pos
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - options
+id: paragraph.carousel.field_carousel_hero_art_pos
+field_name: field_carousel_hero_art_pos
+entity_type: paragraph
+bundle: carousel
+label: 'Artistic Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

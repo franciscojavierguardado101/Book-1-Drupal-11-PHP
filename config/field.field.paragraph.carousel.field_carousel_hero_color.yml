@@ -1,0 +1,21 @@
+uuid: 7d205eab-78e9-4df7-bf5e-a561e1e50bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel_hero_color
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - options
+id: paragraph.carousel.field_carousel_hero_color
+field_name: field_carousel_hero_color
+entity_type: paragraph
+bundle: carousel
+label: Color
+description: 'This field changes the color of the link button.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

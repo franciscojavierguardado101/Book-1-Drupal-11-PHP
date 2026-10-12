@@ -1,0 +1,10 @@
+uuid: 07d814c3-77ab-45a9-a677-8e0bc47af2fb
+langcode: en
+status: true
+dependencies: {  }
+id: feature_spot
+label: 'Feature Spot'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

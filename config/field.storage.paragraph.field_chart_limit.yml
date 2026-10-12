@@ -1,0 +1,22 @@
+uuid: e6725f2d-9de5-46b2-ac24-f7c49710588f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: P44gSEJoY4wAXzi4vLf7w0g3XZ9fJW93fneAzq8iBCc
+id: paragraph.field_chart_limit
+field_name: field_chart_limit
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: true
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

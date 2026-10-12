@@ -1,0 +1,12 @@
+uuid: 5facc517-6cfc-4b69-b87f-be3720520924
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: A6UOPFSubcdpDVnGPTJ5IjUBrLkhNrAJ7PsbA1CpUik
+id: view_embed
+label: 'View Embed'
+icon_uuid: null
+icon_default: null
+description: 'Embed a Drupal View into a page or content area.'
+behavior_plugins: {  }

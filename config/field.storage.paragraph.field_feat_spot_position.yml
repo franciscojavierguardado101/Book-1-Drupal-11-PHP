@@ -1,0 +1,33 @@
+uuid: ff2f6339-3f46-4d82-998a-d8d3507d5279
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_feat_spot_position
+field_name: field_feat_spot_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fs_up_right_side
+      label: 'Upper Right Side'
+    -
+      value: fs_up_left_side
+      label: 'Upper Left Side'
+    -
+      value: lo_right_side
+      label: 'Lower Right Side'
+    -
+      value: lo_left_side
+      label: 'Lower Left Side'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

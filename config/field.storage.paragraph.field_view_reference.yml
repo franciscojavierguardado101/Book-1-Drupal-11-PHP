@@ -1,0 +1,21 @@
+uuid: 62e0b71d-2b0d-423e-ac29-3fb279087a5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - francisco_view_reference
+    - paragraphs
+_core:
+  default_config_hash: o0L8BBQ-SH1Z8eMkS2xh7xia6JYCf-a7MqazMU-Y3FM
+id: paragraph.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+type: francisco_view_reference
+settings: {  }
+module: francisco_view_reference
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

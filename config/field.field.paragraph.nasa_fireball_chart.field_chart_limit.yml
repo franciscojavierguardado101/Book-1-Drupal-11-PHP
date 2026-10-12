@@ -1,0 +1,27 @@
+uuid: dfbbc158-4d98-4c55-b551-843211b7dcd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_limit
+    - paragraphs.paragraphs_type.nasa_fireball_chart
+_core:
+  default_config_hash: 6SlyxRZot_Opf_p_SOey6posQe2rYdPugzxzcnsBTxU
+id: paragraph.nasa_fireball_chart.field_chart_limit
+field_name: field_chart_limit
+entity_type: paragraph
+bundle: nasa_fireball_chart
+label: 'Number of Events'
+description: 'How many fireball events to display in the chart (1–200). Defaults to 25.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 25
+default_value_callback: ''
+settings:
+  min: 1
+  max: 200
+  prefix: ''
+  suffix: ' events'
+field_type: integer

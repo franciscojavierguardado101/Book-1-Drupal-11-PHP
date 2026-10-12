@@ -1,0 +1,23 @@
+uuid: b4ae6cd1-0ed2-4386-b1cb-a7d149109e01
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: JlnNGDp3x5RYQI0nz9-w2yEdlyVhB3kS4f7J_BuenSg
+id: paragraph.field_nasa_v_label
+field_name: field_nasa_v_label
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

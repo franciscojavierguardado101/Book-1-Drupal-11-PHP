@@ -1,0 +1,89 @@
+uuid: bf97c9dc-bfba-4c6f-83da-6f05c643f27d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.pdf_editor
+    - paragraphs.paragraphs_type.carousel_hero
+    - paragraphs.paragraphs_type.descriptive_content
+    - paragraphs.paragraphs_type.feature_spot
+    - paragraphs.paragraphs_type.hero_section
+    - paragraphs.paragraphs_type.mosaic_photos
+    - paragraphs.paragraphs_type.pdf_editor
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.space_calendar
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - entity_reference_revisions
+id: node.pdf_editor.field_components
+field_name: field_components
+entity_type: node
+bundle: pdf_editor
+label: Components
+description: 'Add modular content components'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rich_text: rich_text
+      hero_section: hero_section
+      carousel_hero: carousel_hero
+      feature_spot: feature_spot
+      mosaic_photos: mosaic_photos
+      descriptive_content: descriptive_content
+      view_embed: view_embed
+      space_calendar: space_calendar
+      pdf_editor: pdf_editor
+    negate: 0
+    target_bundles_drag_drop:
+      apod:
+        weight: 16
+        enabled: false
+      carousel:
+        weight: 5
+        enabled: false
+      carousel_hero:
+        weight: 6
+        enabled: true
+      descriptive_content:
+        weight: 13
+        enabled: true
+      earthquake_dashboard:
+        weight: 20
+        enabled: false
+      feature_spot:
+        weight: 10
+        enabled: true
+      hero_section:
+        weight: 3
+        enabled: true
+      iss_tracker:
+        weight: 23
+        enabled: false
+      mosaic_photos:
+        weight: 11
+        enabled: true
+      mosaic_photos_card:
+        weight: 12
+        enabled: false
+      nasa_videos:
+        weight: 26
+        enabled: false
+      pdf_editor:
+        weight: 27
+        enabled: true
+      rich_text:
+        weight: 1
+        enabled: true
+      space_calendar:
+        weight: 17
+        enabled: true
+      view_embed:
+        weight: 15
+        enabled: true
+field_type: entity_reference_revisions

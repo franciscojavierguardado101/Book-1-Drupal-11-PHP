@@ -1,0 +1,23 @@
+uuid: 729ccdf5-105a-4896-8ae8-50d588accbcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.apod.field_apod_label
+    - paragraphs.paragraphs_type.apod
+_core:
+  default_config_hash: WnyhoaoiD34pKsrQnphaNjRGangkk_Y94R9Slvpo8d8
+id: paragraph.apod.default
+targetEntityType: paragraph
+bundle: apod
+mode: default
+content:
+  field_apod_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

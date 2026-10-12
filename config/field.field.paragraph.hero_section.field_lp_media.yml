@@ -1,0 +1,31 @@
+uuid: c70df956-2514-48ba-b7ea-709fda89d545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lp_media
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.hero_section
+id: paragraph.hero_section.field_lp_media
+field_name: field_lp_media
+entity_type: paragraph
+bundle: hero_section
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

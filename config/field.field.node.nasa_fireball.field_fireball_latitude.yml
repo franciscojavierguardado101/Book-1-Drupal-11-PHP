@@ -1,0 +1,25 @@
+uuid: 11e5dd01-392f-4a54-b95b-f4a36ac7606d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fireball_latitude
+    - node.type.nasa_fireball
+_core:
+  default_config_hash: EkM5qpESwFOCo86HP0Dods28UN2odlbXsWTOeG6EbI8
+id: node.nasa_fireball.field_fireball_latitude
+field_name: field_fireball_latitude
+entity_type: node
+bundle: nasa_fireball
+label: 'Latitude (°)'
+description: 'Geographic latitude of the fireball event. Positive = North, Negative = South.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

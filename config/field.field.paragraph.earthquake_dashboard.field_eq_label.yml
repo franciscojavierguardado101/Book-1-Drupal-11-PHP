@@ -1,0 +1,21 @@
+uuid: 0be22ac6-a32c-4854-9a92-ee4266775e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eq_label
+    - paragraphs.paragraphs_type.earthquake_dashboard
+_core:
+  default_config_hash: KqoNH1RVfIyRNDOfxTcMdhh3QJRnte2DQU8za9V8hrM
+id: paragraph.earthquake_dashboard.field_eq_label
+field_name: field_eq_label
+entity_type: paragraph
+bundle: earthquake_dashboard
+label: 'Dashboard heading'
+description: 'Optional heading displayed above the dashboard on the frontend.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

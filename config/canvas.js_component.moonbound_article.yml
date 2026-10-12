@@ -1,0 +1,324 @@
+uuid: 4bad6994-b157-4eb5-aec4-8f06f3430eab
+langcode: en
+status: true
+dependencies: {  }
+machineName: moonbound_article
+name: moonbound_article
+required: {  }
+props:
+  heroImage:
+    type: object
+    $ref: 'json-schema-definitions://canvas.module/image'
+    title: heroImage
+    examples:
+      -
+        src: 'https://placehold.co/1000x500@2x.png?alternateWidths=https%3A%2F%2Fplacehold.co%2F%7Bwidth%7Dx%7Bheight%7D%402x.png'
+        alt: 'Example image placeholder'
+        width: 1000
+        height: 500
+  title:
+    type: string
+    title: title
+  eventDate:
+    type: string
+    title: eventDate
+  eventTime:
+    type: string
+    title: eventTime
+  timezone:
+    type: string
+    title: timezone
+  description:
+    type: string
+    contentMediaType: text/html
+    x-formatting-context: block
+    title: description
+  tag:
+    type: string
+    title: tag
+slots: {  }
+js:
+  original: |-
+    import FormattedText from '@/lib/FormattedText';
+
+    const MoonboundArticle = ({ heroImage, title, eventDate, eventTime, timezone, description, tag }) => (
+      <article style={{ background: '#0a0a0a', minHeight: '100vh', fontFamily: 'Georgia, serif' }}>
+
+        {/* Hero */}
+        <figure style={{ margin: 0, position: 'relative', width: '100%', height: '480px', overflow: 'hidden' }}>
+          {heroImage?.src
+            ? <img src={heroImage.src} alt={heroImage.alt || ''} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            : <div style={{ width: '100%', height: '100%', background: '#111' }} />}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, rgba(10,10,10,0.9) 100%)' }} />
+          {tag && (
+            <p style={{ position: 'absolute', top: '32px', left: '48px', margin: 0,
+              color: '#fc3d21', fontSize: '11px', letterSpacing: '4px',
+              textTransform: 'uppercase', fontFamily: 'monospace' }}>{tag}</p>
+          )}
+        </figure>
+
+        {/* Body */}
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '64px 48px' }}>
+          <div style={{ display: 'flex', gap: '64px', alignItems: 'flex-start' }}>
+
+            {/* Left: title + description */}
+            <div style={{ flex: '1 1 0', minWidth: 0 }}>
+              {title && (
+                <h1 style={{ color: '#f0f0f0', fontSize: 'clamp(28px, 4vw, 52px)',
+                  fontWeight: '400', fontStyle: 'italic', lineHeight: '1.2',
+                  margin: '0 0 40px', letterSpacing: '-0.5px' }}>{title}</h1>
+              )}
+              {description && (
+                <div style={{ color: '#bbb', fontSize: '17px', lineHeight: '1.8', maxWidth: '660px' }}>
+                  <FormattedText>{description}</FormattedText>
+                </div>
+              )}
+            </div>
+
+            {/* Right: details table */}
+            {(eventDate || eventTime || timezone) && (
+              <aside style={{ flexShrink: 0, width: '260px', borderLeft: '1px solid #2a2a2a', paddingLeft: '40px' }}>
+                <p style={{ color: '#555', fontSize: '10px', letterSpacing: '4px',
+                  textTransform: 'uppercase', fontFamily: 'monospace', margin: '0 0 24px' }}>Details</p>
+                <dl style={{ margin: 0 }}>
+                  {eventDate && <>
+                    <dt style={{ color: '#555', fontSize: '10px', letterSpacing: '3px',
+                      textTransform: 'uppercase', fontFamily: 'monospace', margin: '0 0 4px' }}>Date</dt>
+                    <dd style={{ color: '#e0e0e0', fontSize: '15px', margin: '0 0 24px',
+                      fontFamily: 'monospace' }}>{eventDate}</dd>
+                  </>}
+                  {eventTime && <>
+                    <dt style={{ color: '#555', fontSize: '10px', letterSpacing: '3px',
+                      textTransform: 'uppercase', fontFamily: 'monospace', margin: '0 0 4px' }}>Time</dt>
+                    <dd style={{ color: '#e0e0e0', fontSize: '15px', margin: '0 0 24px',
+                      fontFamily: 'monospace' }}>{eventTime}</dd>
+                  </>}
+                  {timezone && <>
+                    <dt style={{ color: '#555', fontSize: '10px', letterSpacing: '3px',
+                      textTransform: 'uppercase', fontFamily: 'monospace', margin: '0 0 4px' }}>Timezone</dt>
+                    <dd style={{ color: '#e0e0e0', fontSize: '15px', margin: 0,
+                      fontFamily: 'monospace' }}>{timezone}</dd>
+                  </>}
+                </dl>
+              </aside>
+            )}
+
+          </div>
+        </div>
+      </article>
+    );
+
+    export default MoonboundArticle;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+    import FormattedText from '@/lib/FormattedText';
+    const MoonboundArticle = ({ heroImage, title, eventDate, eventTime, timezone, description, tag })=>/*#__PURE__*/ _jsxs("article", {
+            style: {
+                background: '#0a0a0a',
+                minHeight: '100vh',
+                fontFamily: 'Georgia, serif'
+            },
+            children: [
+                /*#__PURE__*/ _jsxs("figure", {
+                    style: {
+                        margin: 0,
+                        position: 'relative',
+                        width: '100%',
+                        height: '480px',
+                        overflow: 'hidden'
+                    },
+                    children: [
+                        (heroImage === null || heroImage === void 0 ? void 0 : heroImage.src) ? /*#__PURE__*/ _jsx("img", {
+                            src: heroImage.src,
+                            alt: heroImage.alt || '',
+                            style: {
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                display: 'block'
+                            }
+                        }) : /*#__PURE__*/ _jsx("div", {
+                            style: {
+                                width: '100%',
+                                height: '100%',
+                                background: '#111'
+                            }
+                        }),
+                        /*#__PURE__*/ _jsx("div", {
+                            style: {
+                                position: 'absolute',
+                                inset: 0,
+                                background: 'linear-gradient(to bottom, transparent 40%, rgba(10,10,10,0.9) 100%)'
+                            }
+                        }),
+                        tag && /*#__PURE__*/ _jsx("p", {
+                            style: {
+                                position: 'absolute',
+                                top: '32px',
+                                left: '48px',
+                                margin: 0,
+                                color: '#fc3d21',
+                                fontSize: '11px',
+                                letterSpacing: '4px',
+                                textTransform: 'uppercase',
+                                fontFamily: 'monospace'
+                            },
+                            children: tag
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsx("div", {
+                    style: {
+                        maxWidth: '1200px',
+                        margin: '0 auto',
+                        padding: '64px 48px'
+                    },
+                    children: /*#__PURE__*/ _jsxs("div", {
+                        style: {
+                            display: 'flex',
+                            gap: '64px',
+                            alignItems: 'flex-start'
+                        },
+                        children: [
+                            /*#__PURE__*/ _jsxs("div", {
+                                style: {
+                                    flex: '1 1 0',
+                                    minWidth: 0
+                                },
+                                children: [
+                                    title && /*#__PURE__*/ _jsx("h1", {
+                                        style: {
+                                            color: '#f0f0f0',
+                                            fontSize: 'clamp(28px, 4vw, 52px)',
+                                            fontWeight: '400',
+                                            fontStyle: 'italic',
+                                            lineHeight: '1.2',
+                                            margin: '0 0 40px',
+                                            letterSpacing: '-0.5px'
+                                        },
+                                        children: title
+                                    }),
+                                    description && /*#__PURE__*/ _jsx("div", {
+                                        style: {
+                                            color: '#bbb',
+                                            fontSize: '17px',
+                                            lineHeight: '1.8',
+                                            maxWidth: '660px'
+                                        },
+                                        children: /*#__PURE__*/ _jsx(FormattedText, {
+                                            children: description
+                                        })
+                                    })
+                                ]
+                            }),
+                            (eventDate || eventTime || timezone) && /*#__PURE__*/ _jsxs("aside", {
+                                style: {
+                                    flexShrink: 0,
+                                    width: '260px',
+                                    borderLeft: '1px solid #2a2a2a',
+                                    paddingLeft: '40px'
+                                },
+                                children: [
+                                    /*#__PURE__*/ _jsx("p", {
+                                        style: {
+                                            color: '#555',
+                                            fontSize: '10px',
+                                            letterSpacing: '4px',
+                                            textTransform: 'uppercase',
+                                            fontFamily: 'monospace',
+                                            margin: '0 0 24px'
+                                        },
+                                        children: "Details"
+                                    }),
+                                    /*#__PURE__*/ _jsxs("dl", {
+                                        style: {
+                                            margin: 0
+                                        },
+                                        children: [
+                                            eventDate && /*#__PURE__*/ _jsxs(_Fragment, {
+                                                children: [
+                                                    /*#__PURE__*/ _jsx("dt", {
+                                                        style: {
+                                                            color: '#555',
+                                                            fontSize: '10px',
+                                                            letterSpacing: '3px',
+                                                            textTransform: 'uppercase',
+                                                            fontFamily: 'monospace',
+                                                            margin: '0 0 4px'
+                                                        },
+                                                        children: "Date"
+                                                    }),
+                                                    /*#__PURE__*/ _jsx("dd", {
+                                                        style: {
+                                                            color: '#e0e0e0',
+                                                            fontSize: '15px',
+                                                            margin: '0 0 24px',
+                                                            fontFamily: 'monospace'
+                                                        },
+                                                        children: eventDate
+                                                    })
+                                                ]
+                                            }),
+                                            eventTime && /*#__PURE__*/ _jsxs(_Fragment, {
+                                                children: [
+                                                    /*#__PURE__*/ _jsx("dt", {
+                                                        style: {
+                                                            color: '#555',
+                                                            fontSize: '10px',
+                                                            letterSpacing: '3px',
+                                                            textTransform: 'uppercase',
+                                                            fontFamily: 'monospace',
+                                                            margin: '0 0 4px'
+                                                        },
+                                                        children: "Time"
+                                                    }),
+                                                    /*#__PURE__*/ _jsx("dd", {
+                                                        style: {
+                                                            color: '#e0e0e0',
+                                                            fontSize: '15px',
+                                                            margin: '0 0 24px',
+                                                            fontFamily: 'monospace'
+                                                        },
+                                                        children: eventTime
+                                                    })
+                                                ]
+                                            }),
+                                            timezone && /*#__PURE__*/ _jsxs(_Fragment, {
+                                                children: [
+                                                    /*#__PURE__*/ _jsx("dt", {
+                                                        style: {
+                                                            color: '#555',
+                                                            fontSize: '10px',
+                                                            letterSpacing: '3px',
+                                                            textTransform: 'uppercase',
+                                                            fontFamily: 'monospace',
+                                                            margin: '0 0 4px'
+                                                        },
+                                                        children: "Timezone"
+                                                    }),
+                                                    /*#__PURE__*/ _jsx("dd", {
+                                                        style: {
+                                                            color: '#e0e0e0',
+                                                            fontSize: '15px',
+                                                            margin: 0,
+                                                            fontFamily: 'monospace'
+                                                        },
+                                                        children: timezone
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                })
+            ]
+        });
+    export default MoonboundArticle;
+css:
+  original: ''
+  compiled: |
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+dataDependencies: {  }

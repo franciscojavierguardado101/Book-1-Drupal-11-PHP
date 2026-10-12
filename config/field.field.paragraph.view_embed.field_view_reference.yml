@@ -1,0 +1,23 @@
+uuid: 5c6d64fa-3d9e-4f52-b1fe-7c7b7c4755d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - francisco_view_reference
+_core:
+  default_config_hash: HnW5NSpeRsNtUDTHPBwcXqToKJ2lPlVZxqgF6h9-Bwg
+id: paragraph.view_embed.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: view_embed
+label: View
+description: 'Select the Drupal View and display to embed in this content.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: francisco_view_reference

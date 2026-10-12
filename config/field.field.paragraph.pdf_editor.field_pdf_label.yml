@@ -1,0 +1,21 @@
+uuid: 1d65a1e8-b88d-4a2b-bb8b-2c22d3d6bd17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pdf_label
+    - paragraphs.paragraphs_type.pdf_editor
+_core:
+  default_config_hash: ugyR19WYmD5n0HZYZ__kKhC1n25dz2aLFR38uwOE_QM
+id: paragraph.pdf_editor.field_pdf_label
+field_name: field_pdf_label
+entity_type: paragraph
+bundle: pdf_editor
+label: 'Section label'
+description: 'Optional heading displayed above the PDF editor.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

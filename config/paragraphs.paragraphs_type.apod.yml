@@ -1,0 +1,12 @@
+uuid: 650bb158-f519-4147-889f-aa76d5bdd1f2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ACodQJXMJoIHKK0odJf6Z093cH-1KE0wMnieuAs_c5A
+id: apod
+label: 'NASA APOD'
+icon_uuid: null
+icon_default: ''
+description: "Astronomy Picture of the Day — displays today's NASA APOD with a random image gallery."
+behavior_plugins: {  }

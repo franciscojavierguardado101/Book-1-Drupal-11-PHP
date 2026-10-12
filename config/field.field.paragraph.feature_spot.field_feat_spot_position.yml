@@ -1,0 +1,21 @@
+uuid: 471368b6-073d-4e46-a8b3-18e65bbd4953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feat_spot_position
+    - paragraphs.paragraphs_type.feature_spot
+  module:
+    - options
+id: paragraph.feature_spot.field_feat_spot_position
+field_name: field_feat_spot_position
+entity_type: paragraph
+bundle: feature_spot
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

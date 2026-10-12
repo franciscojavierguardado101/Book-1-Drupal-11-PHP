@@ -1,0 +1,22 @@
+uuid: 640dfc5e-081c-4a23-a0b9-5f7e491efc5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 6Wc2Q4W41k9HaVvHIWa5YkupPfoZ0_XAuV9dy4A_x_o
+id: node.field_fireball_impact_energy
+field_name: field_fireball_impact_energy
+entity_type: node
+type: decimal
+settings:
+  precision: 18
+  scale: 4
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

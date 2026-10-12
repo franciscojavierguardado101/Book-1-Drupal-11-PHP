@@ -1,0 +1,76 @@
+uuid: 6bd3dea5-1e69-4f49-88e0-c27772d235d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_bootstrap
+    - options
+active_version: dbc4d0306eedd666
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: New
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        variant:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: primary
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        pill:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        visually_hidden_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'unread messages'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Badge
+id: sdc.canvas_bootstrap.canvas_bootstrap_badge
+provider: canvas_bootstrap
+source: sdc
+source_local_id: 'canvas_bootstrap:canvas_bootstrap_badge'

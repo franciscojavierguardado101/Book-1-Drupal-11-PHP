@@ -1,0 +1,12 @@
+uuid: 59d53022-a76c-44a3-a74d-8aeaf412bc09
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: buVWa1iQNyK8dvFaZdPaB75VePdKZ9I3rzVGoEch7Fs
+id: space_calendar
+label: 'Space Calendar'
+icon_uuid: null
+icon_default: null
+description: 'Embeds the space weather event calendar widget on any page.'
+behavior_plugins: {  }

@@ -1,0 +1,40 @@
+uuid: 57ba053e-8c4d-458e-8f2e-96a62dffb8e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_create_card
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.carousel_hero
+  module:
+    - entity_reference_revisions
+id: paragraph.carousel_hero.field_create_card
+field_name: field_create_card
+entity_type: paragraph
+bundle: carousel_hero
+label: 'Create Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      carousel: carousel
+    negate: 0
+    target_bundles_drag_drop:
+      carousel:
+        weight: 5
+        enabled: true
+      carousel_hero:
+        weight: 6
+        enabled: false
+      hero_section:
+        weight: 7
+        enabled: false
+      rich_text:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

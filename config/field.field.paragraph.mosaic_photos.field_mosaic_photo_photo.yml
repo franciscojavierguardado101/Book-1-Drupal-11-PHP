@@ -1,0 +1,49 @@
+uuid: 7fd3f641-b5b7-4698-bfb8-10cde79cded4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mosaic_photo_photo
+    - paragraphs.paragraphs_type.mosaic_photos
+    - paragraphs.paragraphs_type.mosaic_photos_card
+  module:
+    - entity_reference_revisions
+id: paragraph.mosaic_photos.field_mosaic_photo_photo
+field_name: field_mosaic_photo_photo
+entity_type: paragraph
+bundle: mosaic_photos
+label: 'Photo Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mosaic_photos_card: mosaic_photos_card
+    negate: 0
+    target_bundles_drag_drop:
+      carousel:
+        weight: 8
+        enabled: false
+      carousel_hero:
+        weight: 9
+        enabled: false
+      hero_section:
+        weight: 10
+        enabled: false
+      mosaic_photos:
+        weight: 11
+        enabled: false
+      mosaic_photos_card:
+        weight: 12
+        enabled: true
+      rich_text:
+        weight: 13
+        enabled: false
+      view_embed:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

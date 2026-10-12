@@ -1,0 +1,72 @@
+uuid: 48fa6e3f-76cb-42ac-bd63-bd555337c85f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.calendar_event
+    - paragraphs.paragraphs_type.carousel_hero
+    - paragraphs.paragraphs_type.descriptive_content
+    - paragraphs.paragraphs_type.feature_spot
+    - paragraphs.paragraphs_type.hero_section
+    - paragraphs.paragraphs_type.mosaic_photos
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.space_calendar
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - entity_reference_revisions
+id: node.calendar_event.field_components
+field_name: field_components
+entity_type: node
+bundle: calendar_event
+label: Components
+description: 'Add modular content components'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rich_text: rich_text
+      hero_section: hero_section
+      carousel_hero: carousel_hero
+      feature_spot: feature_spot
+      mosaic_photos: mosaic_photos
+      descriptive_content: descriptive_content
+      view_embed: view_embed
+      space_calendar: space_calendar
+    negate: 0
+    target_bundles_drag_drop:
+      carousel:
+        weight: 5
+        enabled: false
+      carousel_hero:
+        weight: 6
+        enabled: true
+      descriptive_content:
+        weight: 13
+        enabled: true
+      feature_spot:
+        weight: 10
+        enabled: true
+      hero_section:
+        weight: 3
+        enabled: true
+      mosaic_photos:
+        weight: 11
+        enabled: true
+      mosaic_photos_card:
+        weight: 12
+        enabled: false
+      rich_text:
+        weight: 1
+        enabled: true
+      space_calendar:
+        weight: 17
+        enabled: true
+      view_embed:
+        weight: 15
+        enabled: true
+field_type: entity_reference_revisions

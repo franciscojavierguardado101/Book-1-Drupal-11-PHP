@@ -1,0 +1,34 @@
+uuid: 53076e92-1d3d-4ced-992b-566534a377ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nasa_videos.field_nasa_v_label
+    - field.field.paragraph.nasa_videos.field_nasa_v_query
+    - paragraphs.paragraphs_type.nasa_videos
+_core:
+  default_config_hash: Sa6KIGVNlP0_Zvfza7nEr2U_289GTBQLGWqHhf1ML8M
+id: paragraph.nasa_videos.default
+targetEntityType: paragraph
+bundle: nasa_videos
+mode: default
+content:
+  field_nasa_v_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. NASA Video Library'
+    third_party_settings: {  }
+  field_nasa_v_query:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. Space, Mars, Webb'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

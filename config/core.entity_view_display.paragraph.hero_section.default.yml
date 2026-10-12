@@ -1,0 +1,57 @@
+uuid: f098b761-7da8-4d32-a2c2-ce3e4b69f933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_section.field_lp_caption
+    - field.field.paragraph.hero_section.field_lp_cta
+    - field.field.paragraph.hero_section.field_lp_media
+    - field.field.paragraph.hero_section.field_lp_title
+    - paragraphs.paragraphs_type.hero_section
+  module:
+    - link
+id: paragraph.hero_section.default
+targetEntityType: paragraph
+bundle: hero_section
+mode: default
+content:
+  field_lp_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_lp_cta:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_lp_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lp_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

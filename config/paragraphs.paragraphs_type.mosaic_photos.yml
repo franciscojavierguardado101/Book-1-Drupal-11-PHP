@@ -1,0 +1,10 @@
+uuid: 4689bd1b-0b9c-4361-bf74-1f4dc95da339
+langcode: en
+status: true
+dependencies: {  }
+id: mosaic_photos
+label: 'Mosaic Photos'
+icon_uuid: null
+icon_default: null
+description: 'It is meant to showcase multiple photos.'
+behavior_plugins: {  }

@@ -1,0 +1,13 @@
+uuid: 4469ab6c-a18c-4c51-bfa8-4e5a845c66e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.who_s_online-who_s_online_block
+name: 'Lists (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.content_recent-block_1
+  - block.views_block.who_s_online-who_s_online_block

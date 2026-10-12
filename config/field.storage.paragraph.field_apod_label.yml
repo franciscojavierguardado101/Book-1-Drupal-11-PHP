@@ -1,0 +1,23 @@
+uuid: f0f3a6d4-1bc9-4d6f-a986-371775a1e44e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 8WN6bSF4trtgc6KD7ToQh7_yqPqqY1SIlgOI89SM-7A
+id: paragraph.field_apod_label
+field_name: field_apod_label
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

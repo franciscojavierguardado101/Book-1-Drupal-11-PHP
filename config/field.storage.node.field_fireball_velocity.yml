@@ -1,0 +1,22 @@
+uuid: 047ae23e-bd4b-4bec-bfe1-cae943dd1cc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: EyrNrZZBFuIVfjGy_MyEpFXC75AVtDk3Yuvc2cj2878
+id: node.field_fireball_velocity
+field_name: field_fireball_velocity
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

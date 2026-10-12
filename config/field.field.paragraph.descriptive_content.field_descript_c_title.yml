@@ -1,0 +1,19 @@
+uuid: 34301e70-41d7-4359-ab99-2adbf2bcbeb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descript_c_title
+    - paragraphs.paragraphs_type.descriptive_content
+id: paragraph.descriptive_content.field_descript_c_title
+field_name: field_descript_c_title
+entity_type: paragraph
+bundle: descriptive_content
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

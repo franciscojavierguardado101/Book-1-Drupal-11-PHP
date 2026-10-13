@@ -40,6 +40,7 @@ settings:
       view_embed: view_embed
       space_calendar: space_calendar
       nasa_fireball_chart: nasa_fireball_chart
+      datagov_chart: datagov_chart
     negate: 0
     target_bundles_drag_drop:
       apod:
@@ -50,6 +51,9 @@ settings:
         enabled: false
       carousel_hero:
         weight: 6
+        enabled: true
+      datagov_chart:
+        weight: 21
         enabled: true
       descriptive_content:
         weight: 13

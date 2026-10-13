@@ -1,0 +1,27 @@
+uuid: e780eea0-0e7c-48bf-92f8-c4fb696c9ecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dg_limit
+    - paragraphs.paragraphs_type.datagov_chart
+_core:
+  default_config_hash: h4BHMAwX4kuJap7USf26qYAWKChraxi-NwFZVXplp4k
+id: paragraph.datagov_chart.field_dg_limit
+field_name: field_dg_limit
+entity_type: paragraph
+bundle: datagov_chart
+label: 'Number of Months'
+description: 'How many monthly data points to display for bar and line charts (1–100). Default: 36.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 36
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

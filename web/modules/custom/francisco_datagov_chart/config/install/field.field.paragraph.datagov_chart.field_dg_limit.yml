@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dg_limit
+    - paragraphs.paragraphs_type.datagov_chart
+id: paragraph.datagov_chart.field_dg_limit
+field_name: field_dg_limit
+entity_type: paragraph
+bundle: datagov_chart
+label: 'Number of Months'
+description: 'How many monthly data points to display for bar and line charts (1–100). Default: 36.'
+required: false
+translatable: false
+default_value:
+  - value: 36
+default_value_callback: ''
+settings: {}
+field_type: integer

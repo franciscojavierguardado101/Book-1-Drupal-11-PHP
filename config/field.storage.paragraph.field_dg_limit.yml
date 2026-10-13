@@ -1,0 +1,22 @@
+uuid: 2dee19d3-0d32-49fb-af8d-82e8aa41f76b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: EVU-MoELx13eKq5fKG7O7ifEUtM2gq3D1THllMzUACE
+id: paragraph.field_dg_limit
+field_name: field_dg_limit
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: true
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

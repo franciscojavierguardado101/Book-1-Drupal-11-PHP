@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.datagov_chart.field_dg_label
+    - field.field.paragraph.datagov_chart.field_dg_chart_type
+    - field.field.paragraph.datagov_chart.field_dg_limit
+    - field.field.paragraph.datagov_chart.field_dg_api_path
+    - field.field.paragraph.datagov_chart.field_dg_csv_path
+    - field.field.paragraph.datagov_chart.field_dg_source
+    - paragraphs.paragraphs_type.datagov_chart
+  module:
+    - options
+id: paragraph.datagov_chart.default
+targetEntityType: paragraph
+bundle: datagov_chart
+mode: default
+content:
+  field_dg_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. U.S. Unemployment & Inflation'
+    third_party_settings: {}
+  field_dg_chart_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dg_limit:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: '36'
+    third_party_settings: {}
+  field_dg_api_path:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: '/api/datagov-chart'
+    third_party_settings: {}
+  field_dg_csv_path:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: '/api/datagov-csv'
+    third_party_settings: {}
+  field_dg_source:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: 'U.S. Bureau of Labor Statistics (BLS) via data.gov'
+    third_party_settings: {}
+hidden: {}

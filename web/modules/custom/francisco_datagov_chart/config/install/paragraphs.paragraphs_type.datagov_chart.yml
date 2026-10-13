@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: datagov_chart
+label: 'Data.gov Chart'
+description: 'Interactive bar, line, and scatter chart powered by the U.S. Bureau of Labor Statistics public data API (data.gov). Displays unemployment rate and CPI trends.'
+icon_uuid: null
+icon_default_paragraph_type: false
+behavior_plugins: {}

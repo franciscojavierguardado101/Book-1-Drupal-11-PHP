@@ -1,0 +1,25 @@
+uuid: e4b95910-3db0-4d68-8280-3c33cce239d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dg_chart_type
+    - paragraphs.paragraphs_type.datagov_chart
+  module:
+    - options
+_core:
+  default_config_hash: L2PHHJEFlEJEqp6GIbc6Xxs6_eKz4nkLoCM2_VYNZ4Y
+id: paragraph.datagov_chart.field_dg_chart_type
+field_name: field_dg_chart_type
+entity_type: paragraph
+bundle: datagov_chart
+label: 'Default Chart Type'
+description: 'Which chart type is shown by default. Visitors can switch via the tab buttons.'
+required: false
+translatable: false
+default_value:
+  -
+    value: line
+default_value_callback: ''
+settings: {  }
+field_type: list_string

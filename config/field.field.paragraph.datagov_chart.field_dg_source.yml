@@ -1,0 +1,23 @@
+uuid: 28fb50d3-fb2d-4c38-873a-df7a6b8c7850
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dg_source
+    - paragraphs.paragraphs_type.datagov_chart
+_core:
+  default_config_hash: XtbpwsmbBZ6JMmkuGKarG20Z4yRm9jnkB20oyow0aUI
+id: paragraph.datagov_chart.field_dg_source
+field_name: field_dg_source
+entity_type: paragraph
+bundle: datagov_chart
+label: 'Data Source Attribution'
+description: 'Attribution text shown below the chart heading.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'U.S. Bureau of Labor Statistics (BLS) via data.gov'
+default_value_callback: ''
+settings: {  }
+field_type: string

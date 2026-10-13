@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.datagov_chart.field_dg_label
+    - field.field.paragraph.datagov_chart.field_dg_chart_type
+    - field.field.paragraph.datagov_chart.field_dg_limit
+    - field.field.paragraph.datagov_chart.field_dg_api_path
+    - field.field.paragraph.datagov_chart.field_dg_csv_path
+    - field.field.paragraph.datagov_chart.field_dg_source
+    - paragraphs.paragraphs_type.datagov_chart
+id: paragraph.datagov_chart.default
+targetEntityType: paragraph
+bundle: datagov_chart
+mode: default
+content:
+  field_dg_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {}
+    weight: 0
+    region: content
+  field_dg_chart_type:
+    type: list_default
+    label: above
+    settings: {}
+    third_party_settings: {}
+    weight: 1
+    region: content
+  field_dg_limit:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {}
+    weight: 2
+    region: content
+  field_dg_api_path:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {}
+    weight: 3
+    region: content
+  field_dg_csv_path:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {}
+    weight: 4
+    region: content
+  field_dg_source:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {}
+    weight: 5
+    region: content
+hidden: {}

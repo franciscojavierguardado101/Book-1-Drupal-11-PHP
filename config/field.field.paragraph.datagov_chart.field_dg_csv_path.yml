@@ -1,0 +1,23 @@
+uuid: e905e859-fa83-494d-a163-163e730e058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dg_csv_path
+    - paragraphs.paragraphs_type.datagov_chart
+_core:
+  default_config_hash: XAJ7WBsPEdecDdS1kUDKjWPi6wMmF5VZsBSxzGKNcgU
+id: paragraph.datagov_chart.field_dg_csv_path
+field_name: field_dg_csv_path
+entity_type: paragraph
+bundle: datagov_chart
+label: 'CSV Download Path'
+description: 'Next.js API route that returns the CSV download. e.g. /api/datagov-csv'
+required: false
+translatable: false
+default_value:
+  -
+    value: /api/datagov-csv
+default_value_callback: ''
+settings: {  }
+field_type: string

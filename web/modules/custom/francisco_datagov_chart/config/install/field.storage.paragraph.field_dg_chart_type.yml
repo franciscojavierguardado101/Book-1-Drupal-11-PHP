@@ -1,0 +1,22 @@
+langcode: en
+status: true
+id: paragraph.field_dg_chart_type
+field_name: field_dg_chart_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    - value: bar
+      label: 'Bar — Unemployment Rate by Month'
+    - value: line
+      label: 'Line — Unemployment Trend Over Time'
+    - value: scatter
+      label: 'Scatter — Unemployment vs. CPI'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false
+indexes: {}
+persist_with_no_fields: false
+custom_storage: false

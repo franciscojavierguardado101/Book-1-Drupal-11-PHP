@@ -1,0 +1,8 @@
+francisco_datagov_chart.api_data:
+  path: '/api/datagov-chart'
+  defaults:
+    _controller: '\Drupal\francisco_datagov_chart\Controller\DataGovChartController::getData'
+    _title: 'Data.gov Chart Data'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]

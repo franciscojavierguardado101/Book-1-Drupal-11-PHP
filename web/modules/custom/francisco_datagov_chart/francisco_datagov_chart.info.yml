@@ -1,0 +1,8 @@
+name: 'Francisco Data.gov Chart'
+type: module
+description: 'Paragraph component that renders interactive bar, line, and scatter charts from the U.S. Bureau of Labor Statistics public data API (data.gov). Exposes a JSON endpoint consumed by the Next.js frontend.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:paragraphs
+  - entity_reference_revisions:entity_reference_revisions

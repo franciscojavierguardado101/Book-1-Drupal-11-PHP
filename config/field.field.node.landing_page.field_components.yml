@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_components
     - node.type.landing_page
     - paragraphs.paragraphs_type.carousel_hero
+    - paragraphs.paragraphs_type.datagov_chart
+    - paragraphs.paragraphs_type.descriptive_content
     - paragraphs.paragraphs_type.feature_spot
     - paragraphs.paragraphs_type.hero_section
     - paragraphs.paragraphs_type.mosaic_photos
@@ -34,6 +36,7 @@ settings:
       feature_spot: feature_spot
       mosaic_photos: mosaic_photos
       view_embed: view_embed
+      descriptive_content: descriptive_content
       nasa_fireball_chart: nasa_fireball_chart
       datagov_chart: datagov_chart
     negate: 0
@@ -52,7 +55,7 @@ settings:
         enabled: true
       descriptive_content:
         weight: 20
-        enabled: false
+        enabled: true
       earthquake_dashboard:
         weight: 21
         enabled: false

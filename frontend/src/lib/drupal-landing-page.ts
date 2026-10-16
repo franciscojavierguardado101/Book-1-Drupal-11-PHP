@@ -9,6 +9,8 @@ import type { IssTrackerData } from "@/components/paragraphs/iss-tracker";
 import type { NasaVideosData } from "@/components/paragraphs/nasa-videos";
 import type { PdfEditorData } from "@/components/paragraphs/pdf-editor/types";
 import type { NasaFireballChartData, ChartType } from "@/components/paragraphs/nasa-fireball-chart/types";
+import type { DataGovChartData, ChartType as DataGovChartType } from "@/components/paragraphs/datagov-chart/types";
+import type { WcagCheckerData } from "@/components/paragraphs/wcag-checker/types";
 
 const DRUPAL_BASE = process.env.DRUPAL_BASE_URL ?? "https://francisco-guardado-book-1.ddev.site:33300";
 
@@ -94,6 +96,18 @@ export type ParagraphNasaFireballChart = {
   data: NasaFireballChartData;
 };
 
+export type ParagraphDataGovChart = {
+  type: "paragraph--datagov_chart";
+  id: string;
+  data: DataGovChartData;
+};
+
+export type ParagraphWcagChecker = {
+  type: "paragraph--wcag_checker";
+  id: string;
+  data: WcagCheckerData;
+};
+
 export type ParagraphData =
   | ParagraphCarouselHero
   | ParagraphViewEmbed
@@ -107,7 +121,9 @@ export type ParagraphData =
   | ParagraphIssTracker
   | ParagraphNasaVideos
   | ParagraphPdfEditor
-  | ParagraphNasaFireballChart;
+  | ParagraphNasaFireballChart
+  | ParagraphDataGovChart
+  | ParagraphWcagChecker;
 
 // ─── JSON:API helpers ─────────────────────────────────────────────────────────
 
@@ -210,6 +226,10 @@ export async function getNodeComponents(
         return [parsePdfEditor(ref.id, included)];
       case "paragraph--nasa_fireball_chart":
         return [parseNasaFireballChart(ref.id, included)];
+      case "paragraph--datagov_chart":
+        return [parseDataGovChart(ref.id, included)];
+      case "paragraph--wcag_checker":
+        return [parseWcagChecker(ref.id, included)];
       default: return [];
     }
   });
@@ -617,6 +637,9 @@ function parseNasaFireballChart(id: string, included: AnyResource[]): ParagraphN
       field_chart_label: string | null;
       field_chart_type: ChartType | null;
       field_chart_limit: number | null;
+      field_chart_api_path: string | null;
+      field_chart_csv_path: string | null;
+      field_chart_source: string | null;
     };
   };
 
@@ -630,9 +653,60 @@ function parseNasaFireballChart(id: string, included: AnyResource[]): ParagraphN
     id,
     data: {
       id,
-      heading: para?.attributes.field_chart_label ?? undefined,
+      heading:          para?.attributes.field_chart_label    ?? undefined,
       defaultChartType: chartType,
-      limit: para?.attributes.field_chart_limit ?? 25,
+      limit:            para?.attributes.field_chart_limit    ?? 25,
+      apiPath:          para?.attributes.field_chart_api_path ?? "/api/nasa-fireball-chart",
+      csvPath:          para?.attributes.field_chart_csv_path ?? "/api/nasa-fireball-csv",
+      source:           para?.attributes.field_chart_source   ?? "NASA/JPL CNEOS Fireball API",
+    },
+  };
+}
+
+function parseWcagChecker(id: string, included: AnyResource[]): ParagraphWcagChecker {
+  type ApiWcagChecker = AnyResource & {
+    attributes: { field_wcag_label: string | null };
+  };
+
+  const para = findIncluded<ApiWcagChecker>(included, "paragraph--wcag_checker", id);
+  return {
+    type: "paragraph--wcag_checker",
+    id,
+    data: {
+      id,
+      heading: para?.attributes.field_wcag_label ?? undefined,
+    },
+  };
+}
+
+function parseDataGovChart(id: string, included: AnyResource[]): ParagraphDataGovChart {
+  type ApiDataGovChart = AnyResource & {
+    attributes: {
+      field_dg_label:      string | null;
+      field_dg_chart_type: DataGovChartType | null;
+      field_dg_limit:      number | null;
+      field_dg_api_path:   string | null;
+      field_dg_csv_path:   string | null;
+      field_dg_source:     string | null;
+    };
+  };
+
+  const validTypes = new Set<DataGovChartType>(["bar", "line", "scatter"]);
+  const para = findIncluded<ApiDataGovChart>(included, "paragraph--datagov_chart", id);
+  const rawType = para?.attributes.field_dg_chart_type ?? null;
+  const chartType: DataGovChartType = rawType && validTypes.has(rawType) ? rawType : "line";
+
+  return {
+    type: "paragraph--datagov_chart",
+    id,
+    data: {
+      id,
+      heading:          para?.attributes.field_dg_label      ?? undefined,
+      defaultChartType: chartType,
+      limit:            para?.attributes.field_dg_limit       ?? 36,
+      apiPath:          para?.attributes.field_dg_api_path    ?? "/api/datagov-chart",
+      csvPath:          para?.attributes.field_dg_csv_path    ?? "/api/datagov-csv",
+      source:           para?.attributes.field_dg_source      ?? "U.S. Bureau of Labor Statistics (BLS) via data.gov",
     },
   };
 }

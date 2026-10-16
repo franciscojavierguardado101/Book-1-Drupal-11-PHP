@@ -39,6 +39,7 @@ settings:
       descriptive_content: descriptive_content
       nasa_fireball_chart: nasa_fireball_chart
       datagov_chart: datagov_chart
+      wcag_checker: wcag_checker
     negate: 0
     target_bundles_drag_drop:
       apod:
@@ -91,5 +92,8 @@ settings:
         enabled: false
       view_embed:
         weight: 15
+        enabled: true
+      wcag_checker:
+        weight: 22
         enabled: true
 field_type: entity_reference_revisions

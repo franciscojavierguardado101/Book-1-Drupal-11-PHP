@@ -41,6 +41,7 @@ settings:
       space_calendar: space_calendar
       nasa_fireball_chart: nasa_fireball_chart
       datagov_chart: datagov_chart
+      wcag_checker: wcag_checker
     negate: 0
     target_bundles_drag_drop:
       apod:
@@ -84,5 +85,8 @@ settings:
         enabled: true
       view_embed:
         weight: 15
+        enabled: true
+      wcag_checker:
+        weight: 22
         enabled: true
 field_type: entity_reference_revisions
